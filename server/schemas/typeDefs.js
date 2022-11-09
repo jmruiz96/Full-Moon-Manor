@@ -12,10 +12,23 @@ const typeDefs = gql`
         deathMsg: String
     }
 
+    type User {
+        _id: ID
+        name: String
+        email: String
+        password: String
+        adventures: [[String]]
+    }
+
     type Event {
         _id: ID
         eventOutcome: [Outcome]
     }
+
+    type Auth {
+        token: ID!
+        user: User
+      }
 
     type Outcome {
         _id: ID
@@ -32,6 +45,14 @@ const typeDefs = gql`
 
     type Query {
         room(roomName: String): Room
+        me: User
+    }
+
+    type Mutation {
+        addUser(name: String!, email: String!, password: String!): Auth
+        login(email: String!, password: String!): Auth
+        addAdventures(adventures: [String]): User
+        removeAdventures(adventures: [String]) :User
     }
 `;
 
