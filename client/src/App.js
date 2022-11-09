@@ -10,9 +10,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
-import Profile from './pages/Profile/Profile';
-import Room from './pages/Room/Room';
-import End from './pages/End/End';
+// import Profile from './pages/Profile/Profile';
+// import Room from './pages/Room/Room';
+// import End from './pages/End/End';
 import Footer from './components/Footer/Footer';
 
 const httpLink = createHttpLink({
@@ -45,25 +45,25 @@ function App() {
       <Route 
       path="/"
       element={<Home />} />
-       <Route 
+       {/* <Route 
           path="/room/:roomName" 
           element={<Room />}
-        />
-          <Route 
+        /> */}
+          {/* <Route 
           path="/endgame/:roomName" 
           element={<End />}
-        />
-         <Route 
+        /> */}
+         {/* <Route 
           path="/me" 
           element={<Profile />}
-        />
+        /> */}
         <Route 
           path="*" 
           element={<h1 className='display-2'>You have chosen...poorly! Wrong page.</h1>}
         />
     </Routes>
     </div>
-    {/* <Footer /> */}
+    <Footer />
   </div>
 </Router>
     </ApolloProvider>
