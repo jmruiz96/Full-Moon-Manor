@@ -20,7 +20,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -61,7 +60,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -117,7 +115,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -211,7 +208,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -248,7 +244,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -289,7 +284,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -326,7 +320,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -367,7 +360,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -423,7 +415,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -464,7 +455,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -516,7 +506,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -580,7 +569,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -636,7 +624,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -677,7 +664,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -722,7 +708,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -778,7 +763,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
@@ -823,7 +807,6 @@ module.exports = [
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
-                eventOptions: ["Run", "Hide", "Investigate"],
                 eventOutcome: [{
                     userResponse: "Run",
                     resolutionMessage: "You ran",
