@@ -42,18 +42,19 @@ const resolvers = {
             if (context.user){
                 return User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$push: args},
+                    {$push: {adventures: args}},
                     {new: true, runValidators: true}
                 )
             }
             throw new AuthenticationError('You need to be logged in!');
         },
-        removeAdventures: async (_, args, context) => {
+        removeAdventures: async (_, { adventureId }, context) => {
             if (context.user){
                 return User.findOneAndUpdate(
                     {_id: context.user._id},
                     { $pull: {
-                        adventures: args
+                        adventures: {
+                            _id: adventureId}
                     }},
                     {new: true}
                 )
