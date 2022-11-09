@@ -14,7 +14,6 @@ const typeDefs = gql`
 
     type Event {
         _id: ID
-        eventOptions: [String]
         eventOutcome: [Outcome]
     }
 
