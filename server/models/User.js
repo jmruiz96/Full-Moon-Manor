@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const adventureSchema = require('./Adventure')
 
 const userSchema = new Schema({
     name: {
@@ -17,7 +18,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 5,
     },
-    adventures: [[String]],
+    adventures: [adventureSchema],
 },
     {
         toJSON: {
@@ -35,10 +36,10 @@ userSchema.virtual('fullName')
         this.set({ firstName: first, lastName: last });
     });
 
-userSchema.virtual('adventuresList')
-    .get(function () {
-        return this.adventures.length
-    });
+// userSchema.virtual('adventuresList')
+//     .get(function () {
+//         return this.adventures.length
+//     });
 
 //Hashing user password on signup
 userSchema.pre('save', async function (next) {

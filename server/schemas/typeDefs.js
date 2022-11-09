@@ -12,12 +12,17 @@ const typeDefs = gql`
         deathMsg: String
     }
 
+    type Adventures {
+        _id: ID
+        roomNames: [String]
+    }
+
     type User {
         _id: ID
         name: String
         email: String
         password: String
-        adventures: [[String]]
+        adventures: [Adventures]
     }
 
     type Event {
