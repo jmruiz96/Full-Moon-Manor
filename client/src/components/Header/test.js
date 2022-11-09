@@ -10,7 +10,7 @@ const AppNavbar = () => {
     const [showModal, setShowModal] = useState(false);
   
     return (
-        <>
+      <>
         <Navbar bg='dark' variant='dark' expand='lg'>
           <Container fluid>
             <Navbar.Brand as={Link} to='/'>
@@ -71,4 +71,8 @@ const AppNavbar = () => {
   };
   
   export default AppNavbar;
+
+
+
+
   
