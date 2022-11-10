@@ -56,8 +56,8 @@ module.exports = [
                 nextRoom: 'Crypt'
             },
             {
-                userDirection: 'down',
-                nextRoom: ''
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
             },
             {
                 userDirection: 'left',
@@ -92,13 +92,21 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Store Room'
             },
             {
-                userDirection: 'ArroDown',
+                userDirection: 'down',
                 nextRoom: 'Torture Room'
-            }
+            },
+            {
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
+            },
         ],
         deathMsg: "You died in the wine cellar"
     },
@@ -107,17 +115,21 @@ module.exports = [
         message: "This is the store room",
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Elevator'
             },
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Wine Cellar'
+                userDirection: 'down',
+                nextRoom: 'Furnace'
             },
             {
-                userDirection: 'ArrowDown',
-                nextRoom: 'Furnace'
-            }
+                userDirection: 'left',
+                nextRoom: 'Wine Cellar'
+            },
         ],
         deathMsg: "You died in the store room"
     },
@@ -147,13 +159,21 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Furnace'
+                userDirection: 'up',
+                nextRoom: 'Elevator'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Elevator'
-            }
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'down btn disabled',
+                nextRoom: '#',
+            },
+            {
+                userDirection: 'left',
+                nextRoom: 'Furnace'
+            },
         ],
         deathMsg: "You died in the crypt"
     },
@@ -162,15 +182,19 @@ module.exports = [
         message: "This is the elevator",
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'First Floor Stairs'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Crypt'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'Store Room'
             }
         ],
@@ -181,17 +205,21 @@ module.exports = [
         message: "This is the first floor stairs",
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Elevator'
+                userDirection: 'up',
+                nextRoom: 'Foyer'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'down',
                 nextRoom: 'First Floor Landing'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Foyer'
-            }
+                userDirection: 'left',
+                nextRoom: 'Elevator'
+            },
         ],
         deathMsg: "You died in the stairs"
     },
@@ -200,17 +228,21 @@ module.exports = [
         message: "This is the first floor landing",
         direction: [
             {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'First Floor Stairs'
             },
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'right',
                 nextRoom: 'Study'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Sunroom'
             },
+            {
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
+            }
         ],
         deathMsg: "You died in the first floor landing"
     },
@@ -240,13 +272,21 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'First Floor Landing'
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'down',
                 nextRoom: 'Game Room'
-            }
+            },
+            {
+                userDirection: 'left',
+                nextRoom: 'First Floor Landing'
+            },
         ],
         deathMsg: "You died in the study"
     },
@@ -276,17 +316,21 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'First Floor Landing'
-            },
-            {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'Study'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'down',
                 nextRoom: 'Patio'
-            }
+            },
+            {
+                userDirection: 'left',
+                nextRoom: 'First Floor Landing'
+            },
         ],
         deathMsg: "You died in the game room"
     },
@@ -316,13 +360,21 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Sunroom'
+                userDirection: 'up',
+                nextRoom: 'Game Room'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Game Room'
-            }
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'left',
+                nextRoom: 'Sunroom'
+            },
         ],
         deathMsg: "You died in the patio"
     },
@@ -352,17 +404,21 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Graveyard'
-            },
-            {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'First Floor Landing'
             },
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'right',
                 nextRoom: 'Patio'
-            }
+            },
+            {
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'left',
+                nextRoom: 'Graveyard'
+            },
         ],
         deathMsg: "You died in the sunroom"
     },
@@ -392,12 +448,20 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Dining Room'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Sunroom'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Dining Room'
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
             }
         ],
         deathMsg: "You died in the graveyard"
@@ -407,21 +471,25 @@ module.exports = [
         message: "This is the dining room",
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Kitchen'
-            },
-            {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'Living Room'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'down',
                 nextRoom: 'Graveyard'
-            }
+            },
+            {
+                userDirection: 'left',
+                nextRoom: 'Kitchen'
+            },
         ],
         deathMsg: "You died in the dining room"
     },
-    {
+     {
         roomName: "Living Room",
         message: "This is the living room",
         eventMessage: "2 dudes walk into a bar",
@@ -447,15 +515,19 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+              },
+            {
+                userDirection: 'right',
                 nextRoom: 'Foyer'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Dining Room'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'First Floor Bathroom'
             }
         ],
@@ -487,13 +559,22 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowLeft',
-                nextRoom: 'Living Room'
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+              },
+              {
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+              },
+              {
+                userDirection: 'down',
+                nextRoom: 'First Floor Stairs'
             },
             {
-                userDirection: 'ArrowDown',
-                nextRoom: 'First Floor Stairs'
+                userDirection: 'left',
+                nextRoom: 'Living Room'
             }
+           
         ],
         deathMsg: "You died in the foyer"
     },
@@ -502,13 +583,21 @@ module.exports = [
         message: "This is the first floor bathroom",
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+              },
+            {
+                userDirection: 'right',
                 nextRoom: 'Living Room'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Kitchen'
-            }
+            },
+            {
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
+              }
         ],
         deathMsg: "You died in the first floor bathroom"
     },
@@ -538,15 +627,19 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
-                nextRoom: 'Dining Room'
-            },
-            {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'First Floor Bathroom'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'right',
+                nextRoom: 'Dining Room'
+            },
+            {
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'left',
                 nextRoom: 'Second Floor Stairs'
             }
         ],
@@ -557,21 +650,22 @@ module.exports = [
         message: "This is the second floor stairs",
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Bedroom 1'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Kitchen'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Laboratory'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'Creaky Hallway'
             },
-            {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Bedroom 1'
-            }
+          
         ],
         deathMsg: "You died in the second floor stairs"
     },
@@ -601,11 +695,19 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+              },
+              {
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+              },
+              {
+                userDirection: 'down',
                 nextRoom: 'Second Floor Stairs'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'Second Floor Bathroom'
             }
         ],
@@ -616,15 +718,19 @@ module.exports = [
         message: "This is the second floor bathroom",
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up btn disabled',
+                nextRoom: '#'
+              },
+            {
+                userDirection: 'right',
                 nextRoom: 'Bedroom 1'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Creaky Hallway'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'Bedroom 2'
             }
         ],
@@ -656,16 +762,20 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Safe Exit'
+              },
+              {
+                userDirection: 'right',
                 nextRoom: 'Second Floor Bathroom'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Pentagram Chamber'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Safe Exit'
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
             }
         ],
         deathMsg: "You died in the bedroom 2"
@@ -696,21 +806,22 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Second Floor Bathroom'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Second Floor Stairs'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Master Bedroom'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'Pentagram Chamber'
             },
-            {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Second Floor Bathroom'
-            }
+           
         ],
         deathMsg: "You died in the creaky hallway"
     },
@@ -740,17 +851,22 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Bedroom 2'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Creaky Hallway'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Attic'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Bedroom 2'
-            }
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
+              }
+            
         ],
         deathMsg: "You died in the pentagram chamber"
     },
@@ -759,11 +875,19 @@ module.exports = [
         message: "This is the laboratory",
         direction: [
             {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'Second Floor Stairs'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'right btn disabled',
+                nextRoom: '#'
+              },
+            {
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
+              },
+            {
+                userDirection: 'left',
                 nextRoom: 'Master Bedroom'
             }
         ],
@@ -795,20 +919,20 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Creaky Hallway'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Laboratory'
             },
             {
-                userDirection: 'ArrowDown',
+                userDirection: 'down',
                 nextRoom: 'Dangerous Exit'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'left',
                 nextRoom: 'Attic'
-            },
-            {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Creaky Hallway'
             }
         ],
         deathMsg: "You died in the master bedroom"
@@ -837,7 +961,7 @@ module.exports = [
                 ]
             }
         ],
-        deathMsg: "You died in the living room"
+        deathMsg: "You died in the attic."
     },
     {
         roomName: "Safe Exit",
