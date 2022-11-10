@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { UserResponseButtons } from '../../components/UserResponseButtons/UserResponseButtons'
 import { Navigate, useParams } from 'react-router-dom';
@@ -12,6 +12,10 @@ export const Room = () => {
     // const [ lifeCount, setLifeCount ] = useState(10);
     const [ eventResolution, setEventResolution ] =  useState("");
     const [visibility, setVisibility] = useState("visibility: none;")
+
+    // useEffect(() => {
+    //     setEventResolution("") 
+    //   });
 
     const { roomName } = useParams();
 
@@ -45,7 +49,7 @@ export const Room = () => {
                             <div>
                                 <h1>{`${room.roomName} has an event`}</h1>
                                 <UserResponseButtons userResponse = {room.event[0]} setEventResolution={setEventResolution}/>
-                                <DPad roomDirections = {room.direction} />
+                                <DPad roomDirections = {room.direction} setEventResolution={setEventResolution} />
                                 <div>
                                     <p>{eventResolution}</p>
                                 </div>
