@@ -706,7 +706,7 @@ module.exports = [
                 nextRoom: 'Pentagram Chamber'
             },
             {
-                userDirection: 'left',
+                userDirection: 'left btn disabled',
                 nextRoom: '#'
             }
         ],
