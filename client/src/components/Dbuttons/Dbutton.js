@@ -2,7 +2,7 @@ import { React } from "react";
 import { Link } from 'react-router-dom'
 import './dbutton.css';
 
-export const DPad = ({ roomDirections }) => {
+export const DPad = ({ roomDirections, setEventResolution }) => {
     return (
         <div className="set dark">
             {console.log(roomDirections)}
@@ -13,7 +13,7 @@ export const DPad = ({ roomDirections }) => {
                 <a className="left" href="#"></a> */}
                 {roomDirections.map((room, index) => {
                     return (
-                        <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} />
+                        <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} onClick={() => setEventResolution("")} />
                     )
                 })}
             </nav>
