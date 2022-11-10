@@ -13,17 +13,12 @@ export const Room = () => {
     const [ eventResolution, setEventResolution ] =  useState("");
     const [visibility, setVisibility] = useState("visibility: none;")
 
-    // useEffect(() => {
-    //     setEventResolution("") 
-    //   });
-
     const { roomName } = useParams();
 
     const { loading, data } = useQuery(QUERY_ROOM, {
         variables: { roomName }
     });
 
-    
 
     console.log(data)
     const room = data?.room || {};
