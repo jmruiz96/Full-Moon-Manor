@@ -6,6 +6,10 @@ import Login from '../Login/Login';
 
 import Auth from '../../utils/auth';
 
+// Dummy login data
+// email: dad@dad.com
+// password: dad1234
+
 const AppNavbar = () => {
     const [showModal, setShowModal] = useState(false);
   

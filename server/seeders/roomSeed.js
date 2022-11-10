@@ -4,12 +4,20 @@ module.exports = [
         message: "This is the torture room",
         direction: [
             {
-                userDirection: 'ArrowRight',
+                userDirection: 'up',
+                nextRoom: 'Wine Cellar'
+            },
+            {
+                userDirection: 'right',
                 nextRoom: 'Furnace'
             },
             {
-                userDirection: 'ArrowUp',
-                nextRoom: 'Wine Cellar'
+                userDirection: 'down btn disabled',
+                nextRoom: '#'
+            },
+            {
+                userDirection: 'left btn disabled',
+                nextRoom: '#'
             }
         ],
         deathMsg: "You died in the torture room"
@@ -40,15 +48,19 @@ module.exports = [
         ],
         direction: [
             {
-                userDirection: 'ArrowRight',
-                nextRoom: 'Crypt'
-            },
-            {
-                userDirection: 'ArrowUp',
+                userDirection: 'up',
                 nextRoom: 'Store Room'
             },
             {
-                userDirection: 'ArrowLeft',
+                userDirection: 'right',
+                nextRoom: 'Crypt'
+            },
+            {
+                userDirection: 'down',
+                nextRoom: ''
+            },
+            {
+                userDirection: 'left',
                 nextRoom: 'Torture Room'
             }
         ],
