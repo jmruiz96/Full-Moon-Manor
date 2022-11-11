@@ -1,10 +1,16 @@
-import { React } from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom'
 import './dbutton.css';
 
-export const DPad = ({ roomDirections, setEventResolution, visibility }) => {
+export const DPad = ({ roomDirections, setEventResolution, visibility, setVisibility }) => {
+    useEffect(() => {
+        setEventResolution("");
+        setVisibility('hidden');
+        // console.log('working')
+    }, [])
+    // console.log('d btn')
     return (
-        <div style={{visibility}} className="set dark">
+        <div style={{ visibility }} className="set dark">
             {console.log(roomDirections)}
             <nav className="o-pad">
                 {/* <a className="up" href="#"></a>
@@ -13,7 +19,7 @@ export const DPad = ({ roomDirections, setEventResolution, visibility }) => {
                 <a className="left" href="#"></a> */}
                 {roomDirections.map((room, index) => {
                     return (
-                        <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} onClick={() => setEventResolution("")} ></Link>
+                        <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} ></Link>
                     )
                 })}
             </nav>

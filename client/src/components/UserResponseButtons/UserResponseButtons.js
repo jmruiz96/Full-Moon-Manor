@@ -1,12 +1,18 @@
-import { React } from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../UserResponseButtons/userresponsebuttons.css';
 import { useLifeCountContext } from "../../utils/LifeCountContext";
 
 export const UserResponseButtons = ({ userResponse, setEventResolution, setVisibility }) => {
-  const { lifeCount, setLifeCount } = useLifeCountContext();
+  useEffect(() => {
+    setEventResolution("");
+    setVisibility('hidden')
+  }, []);
 
+  // console.log('user btn')
+
+  const { lifeCount, setLifeCount } = useLifeCountContext();
   const handleEventClick = (severity) => {
     switch (severity) {
       case "high": setLifeCount(lifeCount - 2);
@@ -27,7 +33,7 @@ export const UserResponseButtons = ({ userResponse, setEventResolution, setVisib
             console.log(e.target);
             setEventResolution(response.resolutionMessage);
             handleEventClick(response.severity);
-            setVisibility('visible')
+            setVisibility('visible');
           }} />
         )
       })}
