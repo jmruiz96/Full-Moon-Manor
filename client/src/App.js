@@ -8,6 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { LifeCountProvider } from './utils/LifeCountContext';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
 // import Profile from './pages/Profile/Profile';
@@ -37,35 +38,37 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-          <Router>
-  <div className="flex-column justify-flex-start min-100-vh">
-    <div className="container">
-          <Header />
-    <Routes>
-      <Route 
-      path="/"
-      element={<Home />} />
-       <Route 
-          path="/room/:roomName" 
-          element={<Room />}
-        />
-          {/* <Route 
+      <LifeCountProvider>
+        <Router>
+          <div className="flex-column justify-flex-start min-100-vh">
+            <div className="container">
+              <Header />
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Home />} />
+                <Route
+                  path="/room/:roomName"
+                  element={<Room />}
+                />
+                {/* <Route 
           path="/endgame/:roomName" 
           element={<End />}
         /> */}
-         {/* <Route 
+                {/* <Route 
           path="/me" 
           element={<Profile />}
         /> */}
-        <Route 
-          path="*" 
-          element={<h1 className='display-2'>You have chosen...poorly! Wrong page.</h1>}
-        />
-    </Routes>
-    </div>
-    <Footer />
-  </div>
-</Router>
+                <Route
+                  path="*"
+                  element={<h1 className='display-2'>You have chosen...poorly! Wrong page.</h1>}
+                />
+              </Routes>
+            </div>
+            <Footer />
+          </div>
+        </Router>
+      </LifeCountProvider>
     </ApolloProvider>
   );
 }
