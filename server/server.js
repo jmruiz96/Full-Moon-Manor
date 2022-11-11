@@ -18,18 +18,18 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-router.get('/', (_, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
-  router.get('/*', (_, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
-
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')))
 };
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../client/build/index.html')));
+
+app.get('/', (_, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+app.get('/*', (_, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
 
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
