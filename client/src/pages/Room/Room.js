@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+import { UserResponseButtons } from '../../components/UserResponseButtons/UserResponseButtons'
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ROOM, QUERY_ME } from '../../utils/queries';
@@ -7,15 +9,21 @@ import { DPad } from '../../components/Dbuttons/Dbutton'
 
 export const Room = () => {
     // const [roomState, setRoomState] = useState('Torture Room')
-    // const [ lifeCount, setLifeCount ] = 10;
-    // const [ eventResolution, setEventResolution ] = "";
-    const [visibility, setVisibility] = "visibility: none;"
+    // const [ lifeCount, setLifeCount ] = useState(10);
+    const [ eventResolution, setEventResolution ] =  useState("");
+    const [visibility, setVisibility] = useState("visibility: none;")
+
+    // useEffect(() => {
+    //     setEventResolution("") 
+    //   });
 
     const { roomName } = useParams();
 
     const { loading, data } = useQuery(QUERY_ROOM, {
         variables: { roomName }
     });
+
+    
 
     console.log(data)
     const room = data?.room || {};
@@ -40,7 +48,11 @@ export const Room = () => {
                             // If room has event, render this
                             <div>
                                 <h1>{`${room.roomName} has an event`}</h1>
-                                {/* <p style={visibility}>(Directional Pad)</p> */}
+                                <UserResponseButtons userResponse = {room.event[0]} setEventResolution={setEventResolution}/>
+                                <DPad roomDirections = {room.direction} setEventResolution={setEventResolution} />
+                                <div>
+                                    <p>{eventResolution}</p>
+                                </div>
                             </div>
                     )
 
