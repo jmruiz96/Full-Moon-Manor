@@ -8,7 +8,7 @@ export const Sidebar = () =>  {
 
     return (
         <>
-            <ul className="col-md-12 d-none d-md-block bg-light sidebar">
+            <ul className="col-md-12 d-none d-md-block sidebar">
                 <li>
                     Test
                 </li>
