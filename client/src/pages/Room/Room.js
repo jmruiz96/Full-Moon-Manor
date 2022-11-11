@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ROOM, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 import { DPad } from '../../components/Dbuttons/Dbutton';
+import { Sidebar } from '../../components/Aside/Aside'
 import { useLifeCountContext } from '../../utils/LifeCountContext'
 
 export const Room = () => {
@@ -54,6 +55,9 @@ export const Room = () => {
                             </div>
                     )
             }
+            <div>
+                <Sidebar />
+            </div>
         </>
     )
 }
