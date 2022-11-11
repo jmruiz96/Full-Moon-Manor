@@ -36,10 +36,13 @@ export const Room = () => {
                 !Auth.loggedIn() ?
                     (<p>'You must be logged in!</p>
                     ) : (
-                        <>
-                            <LifeCount />
-                            <Content />
-                        </>
+                        <div className='d-flex w-100'>
+                            <Sidebar />
+                            <div className='mx-auto'>
+                                <LifeCount />
+                                <Content />
+                            </div>
+                        </div>
                         // // Checking if room has no event or event, render different XML
                         // Auth.loggedIn() && room.event.length === 0 ?
                         //     // If room has no event, render this 
@@ -61,9 +64,6 @@ export const Room = () => {
                         //     </div>
                     )
             }
-            <div>
-                <Sidebar />
-            </div>
         </>
     )
 }
