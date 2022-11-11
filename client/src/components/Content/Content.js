@@ -25,13 +25,14 @@ export const Content = ({ adventureState, setAdventureState }) => {
     const room = data?.room || {};
 
     useEffect(() => {
-     setAdventureState(adventureState => [...adventureState, room.roomName]);
-        console.log(adventureState);
-    }, [room.roomName])
+     setAdventureState (adventureState => [...adventureState, roomName]);
+        console.log(roomName);
+    }, [roomName])
 
     if (loading) {
         return <div>Loading...</div>
     };
+    
     return (
         <>
             {(

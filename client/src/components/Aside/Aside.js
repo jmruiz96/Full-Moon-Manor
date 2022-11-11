@@ -11,10 +11,10 @@ export const Sidebar = ({ adventureState }) =>  {
     const { loading, data } = useQuery(QUERY_ROOM, {
         variables: { roomName }
     });
-    const room = data?.room || {};
-    if (loading) {
-        return <div>Loading...</div>
-    };
+    // const room = data?.room || {};
+    // if (loading) {
+    //     return <div>Loading...</div>
+    // };
 
     return (
         <>
