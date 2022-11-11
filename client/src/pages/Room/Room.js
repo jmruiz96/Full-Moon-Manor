@@ -4,18 +4,15 @@ import { UserResponseButtons } from '../../components/UserResponseButtons/UserRe
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ROOM, QUERY_ME } from '../../utils/queries';
-import Auth from '../../utils/auth'
-import { DPad } from '../../components/Dbuttons/Dbutton'
+import Auth from '../../utils/auth';
+import { DPad } from '../../components/Dbuttons/Dbutton';
+import { useLifeCountContext } from '../../utils/LifeCountContext'
 
 export const Room = () => {
     // const [roomState, setRoomState] = useState('Torture Room')
-    // const [ lifeCount, setLifeCount ] = useState(10);
-    const [ eventResolution, setEventResolution ] =  useState("");
-    const [visibility, setVisibility] = useState("visibility: none;")
-
-    // useEffect(() => {
-    //     setEventResolution("") 
-    //   });
+    const [eventResolution, setEventResolution] = useState("");
+    const [visibility, setVisibility] = useState("visibility: none;");
+    const { lifeCount, setLifeCount } = useLifeCountContext();
 
     const { roomName } = useParams();
 
@@ -23,7 +20,6 @@ export const Room = () => {
         variables: { roomName }
     });
 
-    
 
     console.log(data)
     const room = data?.room || {};
@@ -41,21 +37,22 @@ export const Room = () => {
                         Auth.loggedIn() && room.event.length === 0 ?
                             // If room has no event, render this 
                             <div>
+                                <p>You have {lifeCount} hit points left</p>
                                 <h1>{room.roomName}</h1>
                                 <p>{room.message}</p>
-                                <DPad roomDirections = {room.direction} />
+                                <DPad roomDirections={room.direction} />
                             </div> :
                             // If room has event, render this
                             <div>
+                                <p>You have {lifeCount} hit points left</p>
                                 <h1>{`${room.roomName} has an event`}</h1>
-                                <UserResponseButtons userResponse = {room.event[0]} setEventResolution={setEventResolution}/>
-                                <DPad roomDirections = {room.direction} setEventResolution={setEventResolution} />
+                                <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} />
+                                <DPad roomDirections={room.direction} setEventResolution={setEventResolution} />
                                 <div>
                                     <p>{eventResolution}</p>
                                 </div>
                             </div>
                     )
-
             }
         </>
     )
