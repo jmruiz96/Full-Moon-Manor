@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
-
 import Auth from '../../utils/auth';
+
+import './header.css';
 
 // Dummy login data
 // email: dad@dad.com
@@ -16,7 +17,7 @@ const AppNavbar = () => {
     return (
         <>
         <Navbar bg='dark' variant='dark' expand='lg'>
-          <Container fluid>
+          <Container fluid id='container'>
             <Navbar.Brand as={Link} to='/'>
               Haunted House
             </Navbar.Brand>

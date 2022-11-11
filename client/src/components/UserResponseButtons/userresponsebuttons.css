@@ -1,4 +1,22 @@
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #8064A2;
+#type {
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 30px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: type 5s steps(60, end);
 }
-  
+
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+}
+
+/* .customButton {
+background-color: grey !important;
+border
+} */
