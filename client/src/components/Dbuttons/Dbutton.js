@@ -13,7 +13,7 @@ export const DPad = ({ roomDirections, setEventResolution }) => {
                 <a className="left" href="#"></a> */}
                 {roomDirections.map((room, index) => {
                     return (
-                        <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} onClick={() => setEventResolution("")} />
+                        <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} onClick={() => setEventResolution("")} ></Link>
                     )
                 })}
             </nav>
