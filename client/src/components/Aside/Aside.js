@@ -1,17 +1,31 @@
-import React from "react";
-// import {Nav} from "react-bootstrap";
-// import { withRouter } from "react-router";
+import React, { useState } from "react";
+import { Navigate, useParams } from 'react-router-dom';
+import { QUERY_ROOM } from '../../utils/queries';
+import { useQuery } from '@apollo/client';
+import Auth from '../../utils/auth';
+import { DPad } from '../../components/Dbuttons/Dbutton';
 import '../Aside/aside.css'
 
-export const Sidebar = () =>  {
-   
+export const Sidebar = ({ adventureState }) =>  {
+    const { roomName } = useParams();
+    const { loading, data } = useQuery(QUERY_ROOM, {
+        variables: { roomName }
+    });
+    // const room = data?.room || {};
+    // if (loading) {
+    //     return <div>Loading...</div>
+    // };
 
     return (
         <>
-            <ul className="col-md-12 d-none d-md-block sidebar">
-                <li>
-                    Test
-                </li>
+
+            <ul className="col-md-12 d-none d-md-block bg-light sidebar">
+                {adventureState.map((room, index) => {
+                    return (
+                        <li>{room}</li>
+                    )
+                })}
+                
             </ul>
             {/* <Nav className="col-md-12 d-none d-md-block bg-light sidebar"
             activeKey="/home"
