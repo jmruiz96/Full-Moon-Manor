@@ -2,9 +2,9 @@ import { React } from "react";
 import { Link } from 'react-router-dom'
 import './dbutton.css';
 
-export const DPad = ({ roomDirections, setEventResolution }) => {
+export const DPad = ({ roomDirections, setEventResolution, visibility }) => {
     return (
-        <div className="set dark">
+        <div style={{visibility}} className="set dark">
             {console.log(roomDirections)}
             <nav className="o-pad">
                 {/* <a className="up" href="#"></a>

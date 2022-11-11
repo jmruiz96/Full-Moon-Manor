@@ -11,7 +11,7 @@ import { useLifeCountContext } from '../../utils/LifeCountContext'
 export const Room = () => {
     // const [roomState, setRoomState] = useState('Torture Room')
     const [eventResolution, setEventResolution] = useState("");
-    const [visibility, setVisibility] = useState("visibility: none;");
+    const [visibility, setVisibility] = useState("hidden");
     const { lifeCount, setLifeCount } = useLifeCountContext();
 
     const { roomName } = useParams();
@@ -46,8 +46,8 @@ export const Room = () => {
                             <div>
                                 <p>You have {lifeCount} hit points left</p>
                                 <h1>{`${room.roomName} has an event`}</h1>
-                                <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} />
-                                <DPad roomDirections={room.direction} setEventResolution={setEventResolution} />
+                                <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} setVisibility={setVisibility} />
+                                <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={visibility} />
                                 <div>
                                     <p>{eventResolution}</p>
                                 </div>
