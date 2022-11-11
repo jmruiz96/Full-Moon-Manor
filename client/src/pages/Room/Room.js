@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ROOM, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 import { DPad } from '../../components/Dbuttons/Dbutton';
+import { Sidebar } from '../../components/Aside/Aside'
 import { useLifeCountContext } from '../../utils/LifeCountContext'
 import { Content } from '../../components/Content/Content';
 import { LifeCount } from '../../components/LifeCount/LifeCount'
@@ -35,10 +36,13 @@ export const Room = () => {
                 !Auth.loggedIn() ?
                     (<p>'You must be logged in!</p>
                     ) : (
-                        <>
-                            <LifeCount />
-                            <Content />
-                        </>
+                        <div className='d-flex w-100'>
+                            <Sidebar />
+                            <div className='mx-auto'>
+                                <LifeCount />
+                                <Content />
+                            </div>
+                        </div>
                         // // Checking if room has no event or event, render different XML
                         // Auth.loggedIn() && room.event.length === 0 ?
                         //     // If room has no event, render this 
