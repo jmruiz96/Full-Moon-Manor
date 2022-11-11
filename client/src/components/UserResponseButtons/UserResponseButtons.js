@@ -26,10 +26,10 @@ export const UserResponseButtons = ({ userResponse, setEventResolution, setVisib
   return (
     <div>
       {console.log(userResponse)}
-      <h2>What would you like to do?</h2>
+      <h2 id='type'>What would you like to do?</h2>
       {userResponse.eventOutcome.map((response, index) => {
         return (
-          <Button key={`response-index: ${index}`} as="input" type="button" value={response.userResponse} data-severity={response.severity} data-message={response.resolutionMessage} onClick={(e) => {
+          <Button variant='secondary' className='customButton' key={`response-index: ${index}`} as="input" type="button" value={response.userResponse} data-severity={response.severity} data-message={response.resolutionMessage} onClick={(e) => {
             console.log(e.target);
             setEventResolution(response.resolutionMessage);
             handleEventClick(response.severity);
