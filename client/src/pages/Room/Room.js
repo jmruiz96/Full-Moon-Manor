@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { UserResponseButtons } from '../../components/UserResponseButtons/UserResponseButtons'
-import { Navigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ROOM, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
@@ -35,7 +35,13 @@ export const Room = () => {
         <>
             {
                 !Auth.loggedIn() ?
-                    (<p>'You must be logged in!</p>
+                    (
+                        <>
+                            <p>'You must be logged in!</p>
+                            <Link to="/">
+                                <Button type="button"> Go Back </Button>
+                            </Link>
+                        </>
                     ) : (
                         <div className='d-flex w-100'>
                             <Sidebar adventureState={adventureState} />
