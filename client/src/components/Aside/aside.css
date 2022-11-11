@@ -5,3 +5,7 @@
     max-width: 20vw;
     list-style-position: inside;
 }
+
+li {
+    font-size: 20px;
+}

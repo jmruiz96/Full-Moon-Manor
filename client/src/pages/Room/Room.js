@@ -12,6 +12,7 @@ import { Content } from '../../components/Content/Content';
 import { LifeCount } from '../../components/LifeCount/LifeCount'
 
 export const Room = () => {
+    const [adventureState, setAdventureState] = useState([])
     // const [roomState, setRoomState] = useState('Torture Room')
     // const [eventResolution, setEventResolution] = useState("");
     // const [visibility, setVisibility] = useState("hidden");
@@ -37,10 +38,10 @@ export const Room = () => {
                     (<p>'You must be logged in!</p>
                     ) : (
                         <div className='d-flex w-100'>
-                            <Sidebar />
+                            <Sidebar adventureState={adventureState} />
                             <div className='mx-auto'>
                                 <LifeCount />
-                                <Content />
+                                <Content setAdventureState={setAdventureState} />
                             </div>
                         </div>
                         // // Checking if room has no event or event, render different XML
