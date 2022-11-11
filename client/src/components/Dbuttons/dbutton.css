@@ -5,6 +5,7 @@
   overflow: hidden;
   padding: 30px;
   text-align: center;
+  z-index: 1;
 }
 
 .set .d-pad {

@@ -18,6 +18,7 @@ export const Sidebar = ({ adventureState }) =>  {
 
     return (
         <>
+
             <ul className="col-md-12 d-none d-md-block bg-light sidebar">
                 {adventureState.map((room, index) => {
                     return (
