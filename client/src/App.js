@@ -11,7 +11,7 @@ import './App.css';
 import { LifeCountProvider } from './utils/LifeCountContext';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
-// import Profile from './pages/Profile/Profile';
+import { Profile } from './pages/Profile/Profile';
 import { Room } from './pages/Room/Room';
 // import End from './pages/End/End';
 import Footer from './components/Footer/Footer';
@@ -55,10 +55,10 @@ function App() {
           path="/endgame/:roomName" 
           element={<End />}
         /> */}
-                {/* <Route 
-          path="/me" 
-          element={<Profile />}
-        /> */}
+                <Route
+                  path="/me"
+                  element={<Profile />}
+                />
                 <Route
                   path="*"
                   element={<h1 className='display-2'>You have chosen...poorly! Wrong page.</h1>}
