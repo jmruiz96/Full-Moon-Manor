@@ -6,15 +6,13 @@ import { QUERY_ROOM } from '../../utils/queries';
 import Auth from '../../utils/auth';
 import { DPad } from '../../components/Dbuttons/Dbutton';
 import { useLifeCountContext } from '../../utils/LifeCountContext';
+import { Button } from 'react-bootstrap';
 
 export const Content = ({ adventureState, setAdventureState }) => {
     const [eventResolution, setEventResolution] = useState("");
     const [visibility, setVisibility] = useState("hidden");
     const { lifeCount } = useLifeCountContext();
-    const [deathMsg, setDeathMsg] = useState("");
-    // useEffect(() => {
-    //     setVisibility('hidden')
-    // }, [])
+
 
     const navigate = useNavigate();
 
@@ -50,6 +48,11 @@ export const Content = ({ adventureState, setAdventureState }) => {
                         <h1>{room.roomName}</h1>
                         <p>{room.message}</p>
                         <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={"visible"} setVisibility={setVisibility} setAdventureState={setAdventureState} />
+                        {(room.roomName === "Safe Exit" || (room.roomName === "Dangerous Exit"))
+                            &&
+                            <div>
+                                <Button type="button" onClick={()=> navigate("/")}>Exit to home page</Button>
+                            </div>}
                     </div> :
                     // If room has event, render this
                     <div>
@@ -60,6 +63,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
                         <div>
                             <p>{eventResolution}</p>
                         </div>
+
                     </div>
             )
             }

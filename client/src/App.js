@@ -52,10 +52,6 @@ function App() {
                   element={<Room />}
                 />
                 <Route
-                  path="/endgame/:roomName"
-                  element={<End />}
-                />
-                <Route
                   path="/endgame"
                   element={<End />}
                 />
