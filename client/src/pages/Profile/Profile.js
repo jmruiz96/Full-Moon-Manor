@@ -29,8 +29,8 @@ export const Profile = () => {
     }
 
     return (
-        <div>
-            <div className="flex-row justify-center mb-3">
+        <div className="overflow-control">
+            <div className="flex-row justify-center">
                 {user.adventures.length === 0 ? (
                     <>
                         <h2 className="col-12 col-md-10 p-3 mb-5">
