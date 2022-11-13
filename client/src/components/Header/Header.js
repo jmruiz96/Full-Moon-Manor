@@ -4,17 +4,11 @@ import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Auth from '../../utils/auth';
-
 import './header.css';
-import auth from '../../utils/auth';
-
-// Dummy login data
-// email: dad@dad.com
-// password: dad1234
 
 const AppNavbar = () => {
     const [showModal, setShowModal] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <>
         <Navbar bg='dark' variant='dark' expand='lg'>
