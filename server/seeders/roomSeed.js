@@ -970,7 +970,6 @@ module.exports = [
     {
         roomName: "Dangerous Exit",
         message: "You exited but were injured",
-        eventMessage: "2 dudes walk into a bar",
         deathMsg: "You died while attempting to exit"
     },
 ]
