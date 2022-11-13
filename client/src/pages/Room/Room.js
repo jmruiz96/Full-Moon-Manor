@@ -37,10 +37,10 @@ export const Room = () => {
                 !Auth.loggedIn() ?
                     (
                         <>
-                            {/* <p>'You must be logged in!</p> */}
-                            < Navigate to="/">
-                                {/* <Button type="button"> Go Back </Button> */}
-                            </Navigate>
+                            <p>'You must be logged in!</p>
+                            < Link to="/">
+                                <Button type="button"> Go Back </Button>
+                            </Link>
                         </>
                     ) : (
                         <div className='d-flex w-100'>
