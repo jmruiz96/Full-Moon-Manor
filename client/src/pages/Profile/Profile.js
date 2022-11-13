@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { Button, Accordion } from 'react-bootstrap';
 
@@ -17,12 +17,13 @@ export const Profile = () => {
     if (!user?.name) {
         return (
             <>
-                <h4>
+                {/* <h4>
                     You need to be logged in to see this.
                 </h4>
                 <Link to="/">
                     <Button type="button"> Go Back </Button>
-                </Link>
+                </Link> */}
+                <Navigate to='/'></Navigate>
             </>
         )
     }
