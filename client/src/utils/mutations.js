@@ -23,3 +23,15 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_ADVENTURES = gql`
+mutation AddAdventures($roomNames: [String]) {
+  addAdventures(roomNames: $roomNames) {
+    _id
+    adventures {
+      _id
+      roomNames
+    }
+  }
+}
+`;
