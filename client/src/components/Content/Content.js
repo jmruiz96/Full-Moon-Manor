@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { UserResponseButtons } from '../../components/UserResponseButtons/UserResponseButtons'
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ROOM } from '../../utils/queries';
 import Auth from '../../utils/auth';
 import { DPad } from '../../components/Dbuttons/Dbutton';
-// import { useLifeCountContext } from '../../utils/LifeCountContext';
+import { useLifeCountContext } from '../../utils/LifeCountContext';
 
 export const Content = ({ adventureState, setAdventureState }) => {
     const [eventResolution, setEventResolution] = useState("");
     const [visibility, setVisibility] = useState("hidden");
-    // const { lifeCount, setLifeCount } = useLifeCountContext();
+    const { lifeCount } = useLifeCountContext();
+    const [deathMsg, setDeathMsg] = useState("");
     // useEffect(() => {
     //     setVisibility('hidden')
     // }, [])
+
+    const navigate = useNavigate();
 
     const { roomName } = useParams();
 
@@ -25,16 +28,19 @@ export const Content = ({ adventureState, setAdventureState }) => {
     const room = data?.room || {};
 
     useEffect(() => {
-     setAdventureState (adventureState => [...adventureState, roomName]);
+        setAdventureState(adventureState => [...adventureState, roomName]);
         console.log(roomName);
     }, [roomName])
 
     if (loading) {
         return <div>Loading...</div>
     };
-    
+
     return (
         <>
+            <div>
+                {lifeCount <= 0 && navigate('/endgame', { state: { adventureState, deathMsg: room.deathMsg } })}
+            </div>
             {(
                 // Checking if room has no event or event, render different XML
                 Auth.loggedIn() && room.event.length === 0 ?

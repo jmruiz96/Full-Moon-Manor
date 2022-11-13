@@ -13,7 +13,7 @@ import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
 import { Profile } from './pages/Profile/Profile';
 import { Room } from './pages/Room/Room';
-// import End from './pages/End/End';
+import { End } from './pages/End/End';
 import Footer from './components/Footer/Footer';
 
 const httpLink = createHttpLink({
@@ -51,10 +51,14 @@ function App() {
                   path="/room/:roomName"
                   element={<Room />}
                 />
-                {/* <Route 
-          path="/endgame/:roomName" 
-          element={<End />}
-        /> */}
+                <Route
+                  path="/endgame/:roomName"
+                  element={<End />}
+                />
+                <Route
+                  path="/endgame"
+                  element={<End />}
+                />
                 <Route
                   path="/me"
                   element={<Profile />}
