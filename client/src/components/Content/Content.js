@@ -3,6 +3,8 @@ import { UserResponseButtons } from '../../components/UserResponseButtons/UserRe
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ROOM } from '../../utils/queries';
+import { useMutation } from '@apollo/client';
+import { ADD_ADVENTURES } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import { DPad } from '../../components/Dbuttons/Dbutton';
 import { useLifeCountContext } from '../../utils/LifeCountContext';
@@ -12,6 +14,18 @@ export const Content = ({ adventureState, setAdventureState }) => {
     const [eventResolution, setEventResolution] = useState("");
     const [visibility, setVisibility] = useState("hidden");
     const { lifeCount } = useLifeCountContext();
+    const [addAdventures, { error }] = useMutation(ADD_ADVENTURES)
+
+    const saveAdventureHandler = async () => {
+        try {
+            const { data } = await addAdventures({
+                variables: { roomNames: adventureState }
+            })
+        } catch (error) {
+            console.error(error);
+        }
+
+    };
 
 
     const navigate = useNavigate();
@@ -51,7 +65,10 @@ export const Content = ({ adventureState, setAdventureState }) => {
                         {(room.roomName === "Safe Exit" || (room.roomName === "Dangerous Exit"))
                             &&
                             <div>
-                                <Button type="button" onClick={()=> navigate("/")}>Exit to home page</Button>
+                                <Button type="button" onClick={()=> {
+                                    saveAdventureHandler();
+                                    navigate("/me")
+                                } }>See your adventures...</Button>
                             </div>}
                     </div> :
                     // If room has event, render this

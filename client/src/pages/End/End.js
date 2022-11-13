@@ -11,7 +11,7 @@ export const End = () => {
     // console.log(adventureState);
     // console.log("deathMsg: " + deathMsg);
 
-    const [addAdventures, error] = useMutation(ADD_ADVENTURES)
+    const [addAdventures, { error }] = useMutation(ADD_ADVENTURES)
 
     const addAdventureHandler = async () => {
         try {
