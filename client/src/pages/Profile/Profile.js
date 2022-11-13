@@ -17,13 +17,12 @@ export const Profile = () => {
     if (!user?.name) {
         return (
             <>
-                {/* <h4>
+                <h4>
                     You need to be logged in to see this.
                 </h4>
                 <Link to="/">
                     <Button type="button"> Go Back </Button>
-                </Link> */}
-                <Navigate to='/'></Navigate>
+                </Link>
             </>
         )
     }
