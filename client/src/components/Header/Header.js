@@ -22,7 +22,7 @@ const AppNavbar = () => {
               Haunted House
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='navbar' />
-            <Navbar.Collapse id='navbar'>
+            <Navbar.Collapse id='navbar' className='justify-content-end'>
               <Nav className='ml-auto'>
                 {/* <Nav.Link as={Link} to='/'>
                   Search For Books

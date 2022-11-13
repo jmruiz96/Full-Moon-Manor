@@ -41,7 +41,7 @@ function App() {
       <LifeCountProvider>
         <Router>
           <div className="flex-column justify-flex-start min-100-vh">
-            <div className="container">
+            <div className="container-fluid px-0">
               <Header />
               <Routes>
                 <Route
