@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { Button, Accordion } from 'react-bootstrap';
+import "./profile.css"
 
 import { QUERY_ME } from '../../utils/queries';
 
