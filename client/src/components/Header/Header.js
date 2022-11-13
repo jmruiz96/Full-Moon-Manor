@@ -14,7 +14,7 @@ import auth from '../../utils/auth';
 
 const AppNavbar = () => {
     const [showModal, setShowModal] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <>
         <Navbar bg='dark' variant='dark' expand='lg'>
