@@ -16,8 +16,6 @@ export const DPad = ({ roomDirections, setEventResolution, visibility, setVisibi
                         return (
                             <>
                                 <Link key={`room-index: ${index}`} className={room.userDirection} to={`/room/${room.nextRoom}`} ></Link>
-
-
                             </>
                         )
                     })}
