@@ -34,7 +34,7 @@ export const Room = () => {
         <>
             {
                 !Auth.loggedIn() ?
-                    (<p>'You must be logged in!</p>
+                    (<p>You must be logged in!</p>
                     ) : (
                         <div className='d-flex w-100'>
                             <Sidebar />
