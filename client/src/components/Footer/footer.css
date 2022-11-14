@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger');
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
 #footer {
     font-family: 'Jolly Lodger', cursive;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
