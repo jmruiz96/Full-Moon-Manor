@@ -3,13 +3,24 @@
 #type {
     font-family: 'VT323', monospace;
     color: white;
+    border-right: .15em solid white;
     font-size: 30px;
-    margin: 10px 0 0 10px;
+    margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-    width: 30em;
-    animation: type 5s steps(60, end);
+    max-width: 315px; 
+    animation: type 2s steps(60, end),
+    blink-caret .75s step-end infinite;
 }
+
+@keyframes type {
+    from { width: 0 }
+    to { width: 90% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    60% { border-color: white; }
+  }
 
 .btn-danger, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     font-family: 'Creepster', cursive !important; 
@@ -20,14 +31,3 @@
     font-family: 'Creepster', cursive !important; 
 }
 
-
-@keyframes type {
-    from {
-        width: 0;
-    }
-}
-
-/* .customButton {
-background-color: grey !important;
-border
-} */
