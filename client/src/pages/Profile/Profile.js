@@ -1,18 +1,33 @@
 import React from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { Button, Accordion } from 'react-bootstrap';
 import "./profile.css"
 
 import { QUERY_ME } from '../../utils/queries';
+import { REMOVE_ADVENTURES } from '../../utils/mutations';
 
 export const Profile = () => {
     const { loading, data } = useQuery(QUERY_ME);
     console.log(data)
     const user = data?.me || {};
 
+    const [removeAdventures, { error }] = useMutation(REMOVE_ADVENTURES);
+
     if (loading) {
         return <div>Loading...</div>
+    };
+
+
+    const removeAventuresHandler = async (adventureId) => {
+        try {
+            const { data } = await removeAdventures({
+                variables: { adventureId }
+            })
+        } catch (err) {
+            console.error(err)
+        };
     };
 
     if (!user?.name) {
@@ -50,15 +65,21 @@ export const Profile = () => {
                             {user.adventures.map((adventure, index) => {
                                 return (
                                     <Accordion.Item data-id={adventure._id} key={`adventure-id: ${adventure._id}`} eventKey={index}>
-                                        <Accordion.Header>Adventure #{index + 1}</Accordion.Header>
+                                        <Accordion.Header className=''>
+                                            <Button
+                                                className="btn btn-sm btn-danger mx-3"
+                                                onClick={() => removeAventuresHandler(adventure._id)}
+                                            >
+                                                X
+                                            </Button>
+                                            Adventure #{index + 1}
+                                        </Accordion.Header>
                                         <Accordion.Body>
                                             <ul>
                                                 {adventure.roomNames.map((room, index) => {
                                                     return <li key={`adventure-room-index:${index}`}>{room}</li>
                                                 })}
                                             </ul>
-
-
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 )
