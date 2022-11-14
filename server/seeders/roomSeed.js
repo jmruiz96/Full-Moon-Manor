@@ -179,7 +179,7 @@ module.exports = [
     },
     {
         roomName: "Elevator",
-        message: "This is the elevator",
+        message: "You enter the room and see what looks like an old elevator with a rickety old gate, is this your way out?! You throw open the gate and try to hit any button to take you away from here. None of the buttons light up. After trying everything you can think of you realize that escaping won't be that easy.  As you take a step out you see behind you is the door with strange symbols painted onto it, on your left is a door with a blinking light shining beneath it, and to the right is a door with an arrow point up etched into it.",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -198,7 +198,7 @@ module.exports = [
                 nextRoom: 'Store Room'
             }
         ],
-        deathMsg: "You died in the elevator, it goes up or down straight to an afterlife"
+        deathMsg: "You died in the elevator, it goes down straight to... an bad afterlife :("
     },
     {
         roomName: "First Floor Stairs",
