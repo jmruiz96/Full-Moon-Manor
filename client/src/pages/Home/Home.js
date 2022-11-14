@@ -1,5 +1,4 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useLifeCountContext } from '../../utils/LifeCountContext';

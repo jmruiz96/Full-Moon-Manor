@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from 'react-router-dom'
 import './dbutton.css';
 
@@ -6,7 +6,6 @@ export const DPad = ({ roomDirections, setEventResolution, visibility, setVisibi
 
     return (
         <div style={{ visibility }} className="set dark">
-            {console.log(roomDirections)}
             <nav className="o-pad">
                 <div onClick={() => {
                     setVisibility("hidden");

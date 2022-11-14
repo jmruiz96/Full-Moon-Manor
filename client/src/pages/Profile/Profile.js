@@ -10,7 +10,6 @@ import { REMOVE_ADVENTURES } from '../../utils/mutations';
 
 export const Profile = () => {
     const { loading, data } = useQuery(QUERY_ME);
-    console.log(data)
     const user = data?.me || {};
 
     const [removeAdventures, { error }] = useMutation(REMOVE_ADVENTURES);

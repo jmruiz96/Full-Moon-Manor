@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
+import React from "react";
 import Button from 'react-bootstrap/Button';
 import '../UserResponseButtons/userresponsebuttons.css';
 import { useLifeCountContext } from "../../utils/LifeCountContext";
@@ -19,16 +18,17 @@ export const UserResponseButtons = ({ userResponse, setEventResolution, setVisib
 
   return (
     <div>
-      {console.log(userResponse)}
       <h2 id='type'>What would you like to do?</h2>
       {userResponse.eventOutcome.map((response, index) => {
         return (
-          <Button variant='secondary' className='my-2' id='btn-font' key={`response-index: ${index}`} as="input" type="button" value={response.userResponse} data-severity={response.severity} data-message={response.resolutionMessage} onClick={(e) => {
-            console.log(e.target);
-            setEventResolution(response.resolutionMessage);
-            handleEventClick(response.severity);
-            setVisibility('visible');
-          }} />
+          <Button variant='secondary' className='my-2' id='btn-font'
+            key={`response-index: ${index}`} as="input" type="button"
+            value={response.userResponse} data-severity={response.severity}
+            data-message={response.resolutionMessage} onClick={(e) => {
+              setEventResolution(response.resolutionMessage);
+              handleEventClick(response.severity);
+              setVisibility('visible');
+            }} />
         )
       })}
     </div>
