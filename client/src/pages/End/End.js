@@ -29,7 +29,7 @@ export const End = () => {
     return (
         <div>
             <p>{`Death page ${deathMsg}`}</p>
-            <Button type="button" onClick={() => {
+            <Button variant='secondary' type="button" onClick={() => {
                 addAdventureHandler();
                 navigate('/me');
             }}>See your adventures...</Button>
