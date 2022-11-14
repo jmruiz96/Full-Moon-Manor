@@ -25,7 +25,7 @@ module.exports = [
     {
         roomName: "Furnace",
         message: "As you enter this room you are greeted with a blast of heat as you see an open furnace with raging flames. It reeks of burning flesh and hair, the stench overpowers the air and gags you. As you try to cover your face, you know you can run back through the door on the left to the room you woke up in, or across from you there is a door on the right with strange symbols carved into it, and ahead of you there appears to be a plain wooden door.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -69,7 +69,7 @@ module.exports = [
     {
         roomName: "Wine Cellar",
         message: "As you carefully step into this room, trying to avoid the red liquid sprawled out over the floor you see the walls are lined with what you assume are wine barrels. In the center of the room is a table with a small candle, a half-full chalice, and an open cask slowly leaking wine all over the place, the wine smells spoiled as an abrasive and sharp vinegar scent floods your nose. You walk to the table and know behind you is the door leading to where you awoke, and to the right there is a plain wooden door where you notice a flickering light beneath the door.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -136,7 +136,7 @@ module.exports = [
     {
         roomName: "Crypt",
         message: "You slink past this door with strange symbols carved into only to find a room illuminated by a small window with moonlight pouring through it. There are alcoves indented and spaced even along all the walls containing urns and reliquaries. Beneath the high window lies an built in altar with a long stone coffin atop it. To the left is the door with a red flickering glow emanating from bottom, and ahead of you is the small metal door. Wait, was there a sound that came from the coffin?",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -249,7 +249,7 @@ module.exports = [
     {
         roomName: "Study",
         message: "You enter a richly appointed study. All dark leather and wood, the rich smell of cognac hits your nostrils. There's an immense desk facing away from the window, it seems to be so heavy it must have grown up with the house itself. A phonograph plays on a spindly side table, the record skipping and repeating the lyric 'And in the end, we all fall down/We all float down here below'.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -293,7 +293,7 @@ module.exports = [
     {
         roomName: "Game Room",
         message: "A menagerie of animal busts stare down at you from the walls, an almost unbelievable number packing every available inch of wall space. Beasts both great and small and some that you can't quite identify, they give the air of unknown worlds and deep forbidden places. You notice a bar cart laden with liquor bottles, including the Scotch you remember your grandfather always had on hand.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -337,7 +337,7 @@ module.exports = [
     {
         roomName: "Patio",
         message: "You walk out onto a patio paved hith heavy stone. There is a set of wrought-iron patio furniture: table, chairs, chaise lounge. You also see a self-standing hammock rolled up in the corner. Tall, thick shrubs stand above a low stone border wall bordering all sides except for one: a break in the wall with a sheer drop-off to a roaring river below. You peer over the edge, vertigo quickly washing over you.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -381,7 +381,7 @@ module.exports = [
     {
         roomName: "Sunroom",
         message: "You step into the sunroom. Cheap wicker furniture surrounds a low glass-topped coffee table, also in wicker. A deck of cards lies on the table, scattered. Whoever was playing seems to have left in a hurry. Curiously, a pile of wet towels, about as high as your waist, sits next to the door on your right.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -425,7 +425,7 @@ module.exports = [
     {
         roomName: "Graveyard",
         message: "You find yourself in a backyard graveyard, speckled with old, crumbling headstones and swathed in a low fog. The entire yard is ringed in 12ft high iron fences with sharp spikes along the top. You see a wheelbarrow among the headstones with a shovel leaning against it.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -492,7 +492,7 @@ module.exports = [
      {
         roomName: "Living Room",
         message: "In the living room, you find a very comfortable-looing sofa in front of a roaring fireplace. There's a pool table as well, with the balls arranged perfectly for the opening break.",
-        eventMessage: "2 dudes walk into a bar",
+        
         event: [
             {
                 eventOutcome: [{
@@ -536,7 +536,7 @@ module.exports = [
     {
         roomName: "Foyer",
         message: "In the foyer, you see a beautiful flower arrangement sitting in the center of the room on an elegant wood and glass table.",
-        eventMessage: "2 dudes walk into a bar",
+
         event: [
             {
                 eventOutcome: [{
@@ -604,7 +604,7 @@ module.exports = [
     {
         roomName: "Kitchen",
         message: "The kitchen is large and scrupulously clean. It could easily prepare a meal large enough for a military brigade or a marching band, with room to spare. You see a craggly loaf of sourdough bread sitting on a cutting board on the counter in the center of the room. You can tell by your nose that it's fresh.",
-        eventMessage: "2 dudes walk into a bar",
+
         event: [
             {
                 eventOutcome: [{
@@ -970,6 +970,6 @@ module.exports = [
     {
         roomName: "Dangerous Exit",
         message: "You jumped out of the window onto the branch, which then fell with you on it.",
-        deathMsg: "The branch crushed you"
+        deathMsg: "The branch crushed you when you hit the ground"
     },
 ]
