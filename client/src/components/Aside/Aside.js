@@ -18,7 +18,7 @@ export const Sidebar = ({ adventureState }) =>  {
 
     return (
         <div className="sidebar">
-            <h3>You adventure so far...</h3>
+            <h3>Your adventure so far...</h3>
             <ul>
                 {adventureState.map((room, index) => {
                     return (
