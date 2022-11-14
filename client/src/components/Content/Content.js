@@ -53,6 +53,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
         <>
             <div>
                 {lifeCount <= 0 && navigate('/endgame', { state: { adventureState, deathMsg: room.deathMsg } })}
+                {room.roomName === "Attic" && navigate('/endgame', { state: { adventureState, deathMsg: room.deathMsg}})}
             </div>
             {(
                 // Checking if room has no event or event, render different XML
