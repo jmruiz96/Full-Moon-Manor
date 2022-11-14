@@ -12,7 +12,7 @@ const Home = () => {
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 mb-3 p-3" style={{ border: '1px dotted #1a1a1a' }}>
           <h1>This is the home page</h1>
-          <Link to='/room/Torture Room'> <Button variant='danger'> click me </Button> </Link>
+          <Link to='/room/Torture Room'> <Button variant='danger'> Start New Adventure </Button> </Link>
           {/* <ThoughtForm />
         </div>
         <div className="col-12 col-md-8 mb-3">

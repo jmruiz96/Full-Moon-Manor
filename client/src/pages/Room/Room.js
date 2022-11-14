@@ -11,6 +11,8 @@ import { useLifeCountContext } from '../../utils/LifeCountContext'
 import { Content } from '../../components/Content/Content';
 import { LifeCount } from '../../components/LifeCount/LifeCount'
 
+import './room.css'
+
 export const Room = () => {
     const [adventureState, setAdventureState] = useState([])
 
@@ -20,9 +22,9 @@ export const Room = () => {
                 !Auth.loggedIn() ?
                     (
                         <>
-                            <p>'You must be logged in!</p>
+                            <p className="message">Please log in to start a new adventure!</p>
                             < Link to="/">
-                                <Button type="button"> Go Back </Button>
+                                <Button variant='secondary' type="button"> Go Back </Button>
                             </Link>
                         </>
                     ) : (
