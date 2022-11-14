@@ -647,7 +647,7 @@ module.exports = [
     },
     {
         roomName: "Second Floor Stairs",
-        message: "This is the second floor stairs",
+        message: "You arrive at the top of the stairs with a long dark hallway in front of you with 2 doors to your immediate right and left. You notice that the door to your left is a large metal door with a sign on it that says keep out, you can smell a mixture of what seems to be bleach and ammonia coming out of it. The right door is much more mundane, its just a regular wooden door leading to a bedroom.",
         direction: [
             {
                 userDirection: 'up',
@@ -671,23 +671,23 @@ module.exports = [
     },
     {
         roomName: "Bedroom 1",
-        message: "This is the bedroom 1",
-        eventMessage: "2 dudes walk into a bar",
+        message: "You open the wooden door leading into a bedroom filled to the brim with dolls and plushies. The dolls dead eyes all seem to fixate on you as you come into the room the only light coming from the moonlight seeping through the window. A red headed doll wearing a frilly black goth outfit and heavy black makeup the size of a child is sitting on the bed making eye contact with you. There is another door to the right of the room, the sound of waterdrops hitting a surface can be heard in the distance. You can hear a faint voice singing a lullaby in the room.",
+    
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    resolutionMessage: "You immediately get the hell out of that creepy room.",
                     severity: "low"
                 },
                 {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
+                    userResponse: "Focus",
+                    resolutionMessage: "You focus on where the lullaby is coming from, and it seems to be originating from the main doll on the bed. The lullaby gets louder, and you seem to get sleepier the longer you stand there.",
                     severity: "medium"
                 },
                 {
                     userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
+                    resolutionMessage: "You move closer to the doll on the bed, the closer you get the more lifelike she seems. By the time you reach her she had become a full-size person singing to you while pulling you closer to the bed.",
                     severity: "high"
                 }
                 ]
@@ -711,11 +711,11 @@ module.exports = [
                 nextRoom: 'Second Floor Bathroom'
             }
         ],
-        deathMsg: "You died in the bedroom 1"
+        deathMsg: "You feel yourself slip into a deep sleep as the lullaby gets louder and louder. When you awake on the bed you notice that you've been turned into a doll forced to add others to the collection forever."
     },
     {
         roomName: "Second Floor Bathroom",
-        message: "This is the second floor bathroom",
+        message: "You open the door to see a dimly lit bathroom, a steady stream of drops fall from the faucet head into a pool of water in the tub. Above the sink is a broken mirror reflecting the downtrodden room. A toilet sits in its own little corner of the room, not much out of the ordinary in here except for how creepy it looks in here. On the other side of the room, you see a door leading to what seems to be another bedroom. Another door leading back into the hallway can be seen next to the sink. The ceiling light flickers as if signaling you to move on from this dreary place.",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -738,23 +738,23 @@ module.exports = [
     },
     {
         roomName: "Bedroom 2",
-        message: "This is the bedroom 2",
-        eventMessage: "2 dudes walk into a bar",
+        message: "You open the door into an inviting bedroom, much nicer and cleaner than all the rest of the rooms in this haunted home. Moonlight streams from the open window to the right of you, a light breeze can be felt coming from it. To the left you see a door with an eerie red light coming from the other side. On the other side of the room, you spot an open closet with some clothes in it. You hear something trying to open the door behind you.",
+    
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    resolutionMessage: "You don't stick around to find out what made the noise",
                     severity: "low"
                 },
                 {
                     userResponse: "Hide",
-                    resolutionMessage: "You hid",
+                    resolutionMessage: "You decide the best thing to do is hide in the closet, somehow while you were running in there you stepped on a Lego",
                     severity: "medium"
                 },
                 {
                     userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
+                    resolutionMessage: "You bravely decide to figure out what made that sound, it was a monster so scary that your mind couldn't comprehend it",
                     severity: "high"
                 }
                 ]
@@ -778,28 +778,28 @@ module.exports = [
                 nextRoom: '#'
             }
         ],
-        deathMsg: "You died in the bedroom 2"
+        deathMsg: "You were found by one of the horrors of this house right in front of the exit. You died in the glow of the moonlight regretting your life decisions."
     },
     {
         roomName: "Creaky Hallway",
-        message: "This is the creaky hallway",
-        eventMessage: "2 dudes walk into a bar",
+        message: "You find yourself in a long dark hallway, every step you take creaks the old wooden floors. At the end of the hallway is a door with an eerie red glow coming from behind it, on the opposite end are the stairs to the first floor. Two doors flank either side of the hallway, one is large and ornate with weird symbols written on it. The other is a regular wooden door but you can hear the faint sound of waterdrops coming from the other side of it. A sudden creek of the floorboards startles you into action.",
+    
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    resolutionMessage: "You use the one tactic that never fails running, too bad you trip over something on your way out and hit your head",
+                    severity: "high"
+                },
+                {
+                    userResponse: "Creep",
+                    resolutionMessage: "You decide to take your time and move slowly since the floorboards would give you away if you made to much noise",
                     severity: "low"
                 },
                 {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
-                    severity: "medium"
-                },
-                {
                     userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
-                    severity: "high"
+                    resolutionMessage: "You decide to get your Scooby doo fix and investigate the noise. Turns out it was a black cat, now you got a couple years of bad luck",
+                    severity: "medium"
                 }
                 ]
             }
@@ -827,23 +827,23 @@ module.exports = [
     },
     {
         roomName: "Pentagram Chamber",
-        message: "This is the pentagram chamber",
-        eventMessage: "2 dudes walk into a bar",
+        message: "You find yourself in what seems to be a ritual chamber, an alter situated in the middle of the room has a large pentagram glowing on it. The pentagram radiates with a red glow, and you feel drawn to it like something is calling you to come closer. The walls of this place seem to be made out of stone with glowing symbols scrawled all over the place. There are 3 doors in this room, one leading to the hallway. Another going to the bedroom and the last towards a dark room with a ladder leading to the attic. On the pedestal next to the alter is an open book with weird symbols all over it.",
+    
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    resolutionMessage: "The smart decision here is to leave immediately which you do in haste",
                     severity: "low"
                 },
                 {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
+                    userResponse: "Read",
+                    resolutionMessage: "You pick up the book looking through the pages to see if you can understand something. The book flips to a page with weird glowing symbols and you recite the words of some unknown language not fully in control of yourself. The whole house rumbles as you finish the incantation, the pentagram flashes blinding you and tossing you to the wall. Turns out you just tried summoning Cthulhu welcome to the cult",
                     severity: "medium"
                 },
                 {
                     userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
+                    resolutionMessage: "You get closer to the pentagram feeling the power flowing through it and into you. Before you realize it your already in the middle of the alter. You can feel your strength leaving you as you crumble to the floor",
                     severity: "high"
                 }
                 ]
@@ -868,11 +868,11 @@ module.exports = [
               }
             
         ],
-        deathMsg: "You died in the pentagram chamber"
+        deathMsg: "Your life force was sucked into the pentagram as you hear weird chants in the background. Turns out you were the latest sacrifice to summon a cults dark god, as you lay dying someone thanks you for your service as you hear the screams of the masses coming from outside"
     },
     {
         roomName: "Laboratory",
-        message: "This is the laboratory",
+        message: "You find yourself in a lab of sorts. It looks like something out of Frankenstein in here. The smell of bleach and ammonia wafts through the air like somebody had just thoroughly cleaned the whole room with chemicals. Lab coats hang on hooks alongside goggles, gloves, and what looks like a hazmat suit. This place looks like if Dexter’s Lab was filmed in a dilapidated house. You notice a large metal door that has a sign on it that says please clean yourself before leaving is on the other side of the room. The second door has an exit sign with stairs on it, clearly this leads to the stairs.",
         direction: [
             {
                 userDirection: 'up',
@@ -895,23 +895,23 @@ module.exports = [
     },
     {
         roomName: "Master Bedroom",
-        message: "This is the master bedroom",
-        eventMessage: "2 dudes walk into a bar",
+        message: "The large room opens before you, a large bed sits in the middle of the room. In front of the bed is a dresser that has a TV sitting on top of it. There's nothing but static on the tv but the remote is resting right next to it. A door to the creepy attic is on one side of the room, on the other is a metal door that says lab on it. The last door leads to the hallway, and there's a broken window with a branch in front of it.",
+
         event: [
             {
                 eventOutcome: [{
-                    userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    userResponse: "Turn off the TV",
+                    resolutionMessage: "You take the remote and hit the power button which turns off the TV.",
                     severity: "low"
                 },
                 {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
+                    userResponse: "Look out the window",
+                    resolutionMessage: "You get closer to the window and notice that the branch is close enough to jump to. You cut yourself on the broken glass",
                     severity: "medium"
                 },
                 {
-                    userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
+                    userResponse: "Watch TV",
+                    resolutionMessage: "You take the remote and see if you can change the channel but every time you flip through the channels a clear picture of a women seems to get closer and closer. Eventually the women climbs out of the tv and you feel your consciousness fading",
                     severity: "high"
                 }
                 ]
@@ -939,37 +939,37 @@ module.exports = [
     },
     {
         roomName: "Attic",
-        message: "This is the attic",
-        eventMessage: "2 dudes walk into a bar",
+        message: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in direclty behind you like it was following you. Too late do you realize staring at it turned you to stone too",
+        
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    resolutionMessage: "There's no running from this",
                     severity: "low"
                 },
                 {
                     userResponse: "Hide",
-                    resolutionMessage: "You hid",
+                    resolutionMessage: "You can't hide",
                     severity: "medium"
                 },
                 {
                     userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
+                    resolutionMessage: "Your stuck in place",
                     severity: "high"
                 }
                 ]
             }
         ],
-        deathMsg: "You died in the attic."
+        deathMsg: "Your trapped here forever."
     },
     {
         roomName: "Safe Exit",
-        message: "You exited safely!",
+        message: "You exit the house through the window and climb down to the sidewalk your safe.",
     },
     {
         roomName: "Dangerous Exit",
-        message: "You exited but were injured",
-        deathMsg: "You died while attempting to exit"
+        message: "You jumped out of the window onto the branch, which then fell with you on it.",
+        deathMsg: "The branch crushed you"
     },
 ]
