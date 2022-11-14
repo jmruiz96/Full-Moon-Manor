@@ -24,7 +24,7 @@ module.exports = [
     },
     {
         roomName: "Furnace",
-        message: "As you enter this room you are greeted with a blast of heat as you see an open furnace with raging flames. It reeks of burning flesh and hair, the stench overpowers the air and gags you. As you try to cover your face, you know you can run back through the door on the left that you came through, or across from you there is a door on the right with strange symbols carved into it, and ahead of you there appears to be a plain wooden door.",
+        message: "As you enter this room you are greeted with a blast of heat as you see an open furnace with raging flames. It reeks of burning flesh and hair, the stench overpowers the air and gags you. As you try to cover your face, you know you can run back through the door on the left to the room you woke up in, or across from you there is a door on the right with strange symbols carved into it, and ahead of you there appears to be a plain wooden door.",
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
@@ -68,7 +68,7 @@ module.exports = [
     },
     {
         roomName: "Wine Cellar",
-        message: "As you carefully step into this room, trying to avoid the red liquid sprawled out over the floor you see the walls are lined with what you assume are wine barrels. In the center of the room is a table with a small candle, a half-full chalice, and an open cask slowly leaking wine all over the place, the wine smells spoiled as an abrasive and sharp vinegar scent floods your nose. You walk to the table and know behind you is the door leading you back to where you came to, and to the right there is a plain wooden door where you notice a flickering light beneath the door.",
+        message: "As you carefully step into this room, trying to avoid the red liquid sprawled out over the floor you see the walls are lined with what you assume are wine barrels. In the center of the room is a table with a small candle, a half-full chalice, and an open cask slowly leaking wine all over the place, the wine smells spoiled as an abrasive and sharp vinegar scent floods your nose. You walk to the table and know behind you is the door leading to where you awoke, and to the right there is a plain wooden door where you notice a flickering light beneath the door.",
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
@@ -112,7 +112,7 @@ module.exports = [
     },
     {
         roomName: "Store Room",
-        message: "This is the store room",
+        message: "Upon opening this door you find a room with a dangling lightbulb which pulses with a dim light that illuminates the shadows. As you move through the room this blinking light reveals empty cages and shelves lined with jars full of oddities in greenish solution. You hear the skittering of many small feet dart along a wall. Behind you is a door with a reddish glow gleaming through the cracks around it, to the left is a door where there is some red liquid seeping out from below, and on the right seems to be a small metal door. ",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -131,28 +131,28 @@ module.exports = [
                 nextRoom: 'Wine Cellar'
             },
         ],
-        deathMsg: "You died in the store room"
+        deathMsg: "You died in the store room, which is pretty impressive due to there not being an event in here..."
     },
     {
         roomName: "Crypt",
-        message: "This is the crypt",
+        message: "You slink past this door with strange symbols carved into only to find a room illuminated by a small window with moonlight pouring through it. There are alcoves indented and spaced even along all the walls containing urns and reliquaries. Beneath the high window lies an built in altar with a long stone coffin atop it. To the left is the door with a red flickering glow emanating from bottom, and ahead of you is the small metal door. Wait, was there a sound that came from the coffin?",
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
                 eventOutcome: [{
-                    userResponse: "Run",
-                    resolutionMessage: "You ran",
-                    severity: "low"
-                },
-                {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
-                    severity: "medium"
-                },
-                {
-                    userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
+                    userResponse: "Try and open the coffin",
+                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off and before its fully a foul gas creeps outs and open a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
                     severity: "high"
+                },
+                {
+                    userResponse: "Reach for remains in the wall",
+                    resolutionMessage: "As you go to grab one of the containers in the wall, it falls out of its place in the wall and shatters, shooting human remains across the floor. You get a whiff of something rank and begin to cough and choke. You have to get out of here before it's too late",
+                    severity: "high"
+                },
+                {
+                    userResponse: "Ignore that and push on",
+                    resolutionMessage: "You are pretty sure you actully-didn't-hear anything and want to push on to the next room",
+                    severity: "low"
                 }
                 ]
             }
@@ -175,11 +175,11 @@ module.exports = [
                 nextRoom: 'Furnace'
             },
         ],
-        deathMsg: "You died in the crypt"
+        deathMsg: "You cannot stop choking and coughing whatever was released into the air is burning in you lungs, you hear the hard thud of a heavy stone lid hitting the floor. Through your own tears you can bearly see a shambling and rotting outline of a being that drags you into the stoney casket and everything goes dark... "
     },
     {
         roomName: "Elevator",
-        message: "This is the elevator",
+        message: "You enter the room and see what looks like an old elevator with a rickety old gate, is this your way out?! You throw open the gate and try to hit any button to take you away from here. None of the buttons light up. After trying everything you can think of you realize that escaping won't be that easy.  As you take a step out you see behind you is the door with strange symbols painted onto it, on your left is a door with a blinking light shining beneath it, and to the right is a door with an arrow point up etched into it.",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -198,7 +198,7 @@ module.exports = [
                 nextRoom: 'Store Room'
             }
         ],
-        deathMsg: "You died in the elevator"
+        deathMsg: "You died in the elevator, it goes down straight to... an bad afterlife :("
     },
     {
         roomName: "First Floor Stairs",
