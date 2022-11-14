@@ -7,10 +7,10 @@ import Auth from '../../utils/auth';
 import './header.css';
 
 const AppNavbar = () => {
-    const [showModal, setShowModal] = useState(false);
-    const navigate = useNavigate();
-    return (
-        <>
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+  return (
+    <>
         <Navbar bg='dark' variant='dark' expand='lg'>
           <Container fluid id='container'>
             <Navbar.Brand as={Link} to='/' id='container'>
@@ -27,10 +27,10 @@ const AppNavbar = () => {
                     <Nav.Link as={Link} to='/me'>
                       See Your Past Adventures
                     </Nav.Link>
-                    <Nav.Link onClick={()=> {
+                    <Nav.Link onClick={() => {
                       navigate('/');
                       Auth.logout()
-                    }} 
+                    }}
                     >Logout</Nav.Link>
                   </>
                 ) : (
@@ -71,8 +71,7 @@ const AppNavbar = () => {
           </Tab.Container>
         </Modal>
       </>
-    );
-  };
-  
-  export default AppNavbar;
-  
+      );
+};
+
+      export default AppNavbar;
