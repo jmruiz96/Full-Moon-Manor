@@ -15,6 +15,8 @@ import { Profile } from './pages/Profile/Profile';
 import { Room } from './pages/Room/Room';
 import { End } from './pages/End/End';
 import Footer from './components/Footer/Footer';
+import Sound from 'react-sound';
+import backgroundMusic from './assets/audio/2018-04-22_-_Dark_Winds_Chapter_1_-_David_Fesliyan.mp3'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -41,6 +43,12 @@ function App() {
       <LifeCountProvider>
         <Router>
           <div className="flex-column justify-flex-start min-100-vh">
+            <Sound
+              url={backgroundMusic}
+              playStatus={Sound.status.PLAYING}
+              playFromPosition={300}
+              loop={true}
+            />
             <div className="container-fluid px-0">
               <Header />
               <div className='p-5'>
