@@ -13,7 +13,7 @@ const AppNavbar = () => {
         <>
         <Navbar bg='dark' variant='dark' expand='lg'>
           <Container fluid id='container'>
-            <Navbar.Brand as={Link} to='/'>
+            <Navbar.Brand as={Link} to='/' id='container'>
               Haunted House
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='navbar' />
@@ -50,10 +50,10 @@ const AppNavbar = () => {
               <Modal.Title id='signup-modal'>
                 <Nav variant='pills'>
                   <Nav.Item>
-                    <Nav.Link eventKey='login'>Login</Nav.Link>
+                    <Nav.Link eventKey='login' className='darkbgd'>Login</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                    <Nav.Link eventKey='signup'className='darkbgd'>Sign Up</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Modal.Title>
