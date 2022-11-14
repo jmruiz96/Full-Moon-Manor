@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Freckle+Face&family=Jolly+Lodger&family=Press+Start+2P&family=VT323&display=swap');
+
 #type {
     font-family: 'VT323', monospace;
-    color: black;
+    color: white;
     font-size: 30px;
     margin: 10px 0 0 10px;
     white-space: nowrap;
     overflow: hidden;
     width: 30em;
     animation: type 5s steps(60, end);
+}
+
+.btn-danger, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    font-family: 'Creepster', cursive !important; 
+   
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    font-family: 'Creepster', cursive !important; 
 }
 
 

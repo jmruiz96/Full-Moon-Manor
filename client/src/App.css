@@ -4,3 +4,7 @@ h1 {
 font-family: 'Creepster', cursive;
 }
 
+* {
+background-color: black;
+color: white;
+}

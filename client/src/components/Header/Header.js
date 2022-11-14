@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Auth from '../../utils/auth';
-
 import './header.css';
-
-// Dummy login data
-// email: dad@dad.com
-// password: dad1234
 
 const AppNavbar = () => {
     const [showModal, setShowModal] = useState(false);
-  
+    const navigate = useNavigate();
     return (
         <>
         <Navbar bg='dark' variant='dark' expand='lg'>
@@ -22,7 +17,7 @@ const AppNavbar = () => {
               Haunted House
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='navbar' />
-            <Navbar.Collapse id='navbar'>
+            <Navbar.Collapse id='navbar' className='justify-content-end'>
               <Nav className='ml-auto'>
                 {/* <Nav.Link as={Link} to='/'>
                   Search For Books
@@ -32,7 +27,11 @@ const AppNavbar = () => {
                     <Nav.Link as={Link} to='/me'>
                       See Your Past Adventures
                     </Nav.Link>
-                    <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                    <Nav.Link onClick={()=> {
+                      navigate('/');
+                      Auth.logout()
+                    }} 
+                    >Logout</Nav.Link>
                   </>
                 ) : (
                   <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
