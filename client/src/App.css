@@ -8,3 +8,15 @@ font-family: 'Creepster', cursive;
 background-color: black;
 color: white;
 }
+
+.custom-container {
+    padding: 3rem;
+}
+
+@media screen and (max-width: 450px) {
+    .custom-container {
+        width: 100%;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+}
