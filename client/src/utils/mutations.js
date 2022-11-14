@@ -35,3 +35,18 @@ mutation addAdventures($roomNames: [String]) {
   }
 }
 `;
+
+export const REMOVE_ADVENTURES = gql`
+mutation removeAdventures($adventureId: ID) {
+  removeAdventures(adventureId: $adventureId) {
+    _id
+    adventures {
+      _id
+      roomNames
+    }
+    email
+    name
+    password
+  }
+}
+`

@@ -17,8 +17,9 @@ export const Sidebar = ({ adventureState }) =>  {
     // };
 
     return (
-        <div>
-            <ul className="sidebar">
+        <div className="sidebar">
+            <h3>You adventure so far...</h3>
+            <ul>
                 {adventureState.map((room, index) => {
                     return (
                         <li>{room}</li>
