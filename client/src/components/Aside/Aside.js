@@ -6,9 +6,9 @@ export const Sidebar = ({ adventureState }) =>  {
         <div className="sidebar w-100">
             <h3>Your adventure so far...</h3>
             <ul>
-                {adventureState.map((room) => {
+                {adventureState.map((room, index) => {
                     return (
-                        <li key={`adventure-sidebar-id${room._id}`}>{room}</li>
+                        <li key={`adventure-sidebar-id${index}`}>{room}</li>
                     )
                 })}
             </ul> 
