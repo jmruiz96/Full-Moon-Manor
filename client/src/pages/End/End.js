@@ -8,8 +8,6 @@ export const End = () => {
     const location = useLocation();
     const adventureState = location.state.adventureState;
     const deathMsg = location.state.deathMsg;
-    // console.log(adventureState);
-    // console.log("deathMsg: " + deathMsg);
 
     const [addAdventures, { error }] = useMutation(ADD_ADVENTURES)
 
