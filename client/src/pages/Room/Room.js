@@ -32,7 +32,7 @@ export const Room = () => {
                             <Sidebar adventureState={adventureState} />
                             <div className='mx-auto w-80'>
                                 <LifeCount />
-                                <Content adventureState={adventureState} setAdventureState={setAdventureState} />
+                                <Content className='room_message' adventureState={adventureState} setAdventureState={setAdventureState} />
                             </div>
                         </div>
                     )
