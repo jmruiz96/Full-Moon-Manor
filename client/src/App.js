@@ -16,6 +16,7 @@ import { Room } from './pages/Room/Room';
 import { End } from './pages/End/End';
 import Footer from './components/Footer/Footer';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -43,6 +44,7 @@ function App() {
           <div className="flex-column justify-flex-start min-100-vh">
             <div className="container-fluid px-0">
               <Header />
+              
               <div className='p-5'>
                 <Routes>
                   <Route

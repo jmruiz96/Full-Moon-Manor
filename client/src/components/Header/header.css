@@ -2,4 +2,17 @@
 
 #container {
     font-family: 'Jolly Lodger', cursive;
+    font-size: 30px;
+}
+
+.darkbgd.active{
+    background-color: #808080 !important;
+}
+
+.darkbgd{
+    color: white !important
+}
+
+.btn-secondary {
+    margin-left: 12px;
 }

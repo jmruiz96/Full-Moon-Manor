@@ -1,7 +1,7 @@
 module.exports = [
     {
         roomName: "Torture Room",
-        message: "This is the torture room",
+        message: "You open your eyes slowly, groggily becoming aware of your surroundings. Before your vision fully clears the dank and musty smell of stagnate air hits your nostrils. As you peer through the darkness you cannot seem to remember where you are or how you came to be here. There is no light in this room but as you pull yourself up off the ground you can make out a table with what look like cold metal tools strewn about. Spilling out from underneath what you hope to be unlocked doors, you notice a dark liquid creeps from the one ahead of you and to the right a flickering of red light. What direction will you go?",
         direction: [
             {
                 userDirection: 'up',
@@ -20,28 +20,28 @@ module.exports = [
                 nextRoom: '#'
             }
         ],
-        deathMsg: "You died in the torture room"
+        deathMsg: "You did it! You broke this game, some how you died in the first room!?"
     },
     {
         roomName: "Furnace",
-        message: "This is the furnace",
+        message: "As you enter this room you are greeted with a blast of heat as you see an open furnace with raging flames. It reeks of burning flesh and hair, the stench overpowers the air and gags you. As you try to cover your face, you know you can run back through the door on the left that you came through, or across from you there is a door on the right with strange symbols carved into it, and ahead of you there appears to be a plain wooden door.",
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
                 eventOutcome: [{
-                    userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    userResponse: "Get out of this room",
+                    resolutionMessage: "As the heat and stench assail you, you bolt for the next door",
                     severity: "low"
                 },
                 {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
-                    severity: "medium"
+                    userResponse: "Attemt to close the furnace",
+                    resolutionMessage: "You muster your strength and move towards the furnace, but as you try and swing the door close fire leaps out and burns you. This firely metal contraption hellish heat rages on...it's time to move on to try and find a way out.",
+                    severity: "high"
                 },
                 {
-                    userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
-                    severity: "high"
+                    userResponse: "Look for an off valve",
+                    resolutionMessage: "As you search for some sort of valve or lever to halt this assault of heat, you begin to feel exhausted and it takes a toll on you. This investagation is to no avail, you need to push foward to hopefully find an exit.",
+                    severity: "medium"
                 }
                 ]
             }
@@ -64,28 +64,28 @@ module.exports = [
                 nextRoom: 'Torture Room'
             }
         ],
-        deathMsg: "You died in the furnace"
+        deathMsg: "You feel the subduing heat clobber you down, you become too exhausted to continue on. Collapsing down to the floor, you stare into the engulfing flames... as you yourself are extinguished."
     },
     {
         roomName: "Wine Cellar",
-        message: "This is the wine cellar",
+        message: "As you carefully step into this room, trying to avoid the red liquid sprawled out over the floor you see the walls are lined with what you assume are wine barrels. In the center of the room is a table with a small candle, a half-full chalice, and an open cask slowly leaking wine all over the place, the wine smells spoiled as an abrasive and sharp vinegar scent floods your nose. You walk to the table and know behind you is the door leading you back to where you came to, and to the right there is a plain wooden door where you notice a flickering light beneath the door.",
         eventMessage: "2 dudes walk into a bar",
         event: [
             {
                 eventOutcome: [{
-                    userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    userResponse: "Take a sip from the cup",
+                    resolutionMessage: "You pick up the chalice, it is embossed with unsettling images. As you put the cup to your lips the liquid it contains doesn't share the vinegary note of the room. You taste the thick burgundy liquid, it has an eerie metallic taste to it. Your stomach immediately turns and you feel nauseated, you need to get out of here.",
+                    severity: "high"
+                },
+                {
+                    userResponse: "Keep moving",
+                    resolutionMessage: "As inviting as this room is, you know you have to find a way out and there is no escape in here. On to the next room",
                     severity: "low"
                 },
                 {
-                    userResponse: "Hide",
-                    resolutionMessage: "You hid",
+                    userResponse: "Take a sip from the cask",
+                    resolutionMessage: "You go to take a sip from the opened cask, as soon as the spoiled wine hits your stomach you feel queasy. You can manage the nausea and it is time to move on. ",
                     severity: "medium"
-                },
-                {
-                    userResponse: "Investigate",
-                    resolutionMessage: "You investigated",
-                    severity: "high"
                 }
                 ]
             }
@@ -108,7 +108,7 @@ module.exports = [
                 nextRoom: '#'
             },
         ],
-        deathMsg: "You died in the wine cellar"
+        deathMsg: "As you gulp down the red liquid, the room begins to spin and your vison blurs. You fall foward, knocking over the tabel and everything on it. Just before you slip out of consciousness, you hear the a faint splash of footsteps against the wet floor..."
     },
     {
         roomName: "Store Room",
