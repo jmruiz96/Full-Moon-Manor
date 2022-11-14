@@ -43,27 +43,29 @@ function App() {
           <div className="flex-column justify-flex-start min-100-vh">
             <div className="container-fluid px-0">
               <Header />
-              <Routes>
-                <Route
-                  path="/"
-                  element={<Home />} />
-                <Route
-                  path="/room/:roomName"
-                  element={<Room />}
-                />
-                <Route
-                  path="/endgame"
-                  element={<End />}
-                />
-                <Route
-                  path="/me"
-                  element={<Profile />}
-                />
-                <Route
-                  path="*"
-                  element={<h1 className='display-2'>You have chosen...poorly! Wrong page.</h1>}
-                />
-              </Routes>
+              <div className='p-5'>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<Home />} />
+                  <Route
+                    path="/room/:roomName"
+                    element={<Room />}
+                  />
+                  <Route
+                    path="/endgame"
+                    element={<End />}
+                  />
+                  <Route
+                    path="/me"
+                    element={<Profile />}
+                  />
+                  <Route
+                    path="*"
+                    element={<h1 className='display-2'>You have chosen...poorly! Wrong page.</h1>}
+                  />
+                </Routes>
+              </div>
             </div>
             <Footer />
           </div>
