@@ -7,10 +7,10 @@ import { DPad } from '../../components/Dbuttons/Dbutton';
 import '../Aside/aside.css'
 
 export const Sidebar = ({ adventureState }) =>  {
-    const { roomName } = useParams();
-    const { loading, data } = useQuery(QUERY_ROOM, {
-        variables: { roomName }
-    });
+    // const { roomName } = useParams();
+    // const { loading, data } = useQuery(QUERY_ROOM, {
+    //     variables: { roomName }
+    // });
     // const room = data?.room || {};
     // if (loading) {
     //     return <div>Loading...</div>
@@ -20,9 +20,9 @@ export const Sidebar = ({ adventureState }) =>  {
         <div className="sidebar">
             <h3>Your adventure so far...</h3>
             <ul>
-                {adventureState.map((room, index) => {
+                {adventureState.map((room) => {
                     return (
-                        <li>{room}</li>
+                        <li key={`adventure-sidebar-id${room._id}`}>{room}</li>
                     )
                 })}
                 
