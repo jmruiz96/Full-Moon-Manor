@@ -33,17 +33,17 @@ export const Profile = () => {
             <div className="flex-row justify-center">
                 {user.adventures.length === 0 ? (
                     <>
-                        <h2 className="col-12 col-md-10 p-3 mb-5">
+                        <h2 className="col-12 col-md-10 p-3 mb-5" id="message">
                             Hey there, {user.name}. You don't have any adventures yet.
                         </h2>
                         <Link to="/">
-                            <Button type="button"> Go Back </Button>
+                            <Button variant='secondary' type="button"> Go Back </Button>
                         </Link>
 
                     </>
                 ) : (
                     <>
-                        <h2 className="col-12 col-md-10 p-3 mb-5">
+                        <h2 className="col-12 col-md-10 p-3 mb-5" id="message">
                             Hey there, {user.name}. Take a look at your past adventures below!
                         </h2>
                         <Accordion>
