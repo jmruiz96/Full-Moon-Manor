@@ -5,12 +5,6 @@ import '../UserResponseButtons/userresponsebuttons.css';
 import { useLifeCountContext } from "../../utils/LifeCountContext";
 
 export const UserResponseButtons = ({ userResponse, setEventResolution, setVisibility }) => {
-  useEffect(() => {
-    setEventResolution("");
-    setVisibility('hidden')
-  }, []);
-
-  // console.log('user btn')
 
   const { lifeCount, setLifeCount } = useLifeCountContext();
   const handleEventClick = (severity) => {

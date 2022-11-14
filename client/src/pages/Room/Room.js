@@ -30,7 +30,7 @@ export const Room = () => {
                     ) : (
                         <div className='d-flex w-100'>
                             <Sidebar adventureState={adventureState} />
-                            <div className='mx-auto'>
+                            <div className='mx-auto w-80'>
                                 <LifeCount />
                                 <Content adventureState={adventureState} setAdventureState={setAdventureState} />
                             </div>
