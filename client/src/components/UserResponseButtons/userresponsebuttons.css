@@ -8,7 +8,7 @@
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-    /* width: 30em; */
+    width:fit-content; 
     animation: type 2s steps(60, end),
     blink-caret .75s step-end infinite;
 }
