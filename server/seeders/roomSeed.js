@@ -288,7 +288,7 @@ module.exports = [
                 nextRoom: 'First Floor Landing'
             },
         ],
-        deathMsg: "You died in the study"
+        deathMsg: "You died in the study as the smell of burnt hair instensifies."
     },
     {
         roomName: "Game Room",
@@ -297,8 +297,8 @@ module.exports = [
         event: [
             {
                 eventOutcome: [{
-                    userResponse: "Run",
-                    resolutionMessage: "You ran",
+                    userResponse: "I'm good",
+                    resolutionMessage: "You don't want one bit of those beasties. You head through to the next room.",
                     severity: "low"
                 },
                 {
@@ -376,7 +376,7 @@ module.exports = [
                 nextRoom: 'Sunroom'
             },
         ],
-        deathMsg: "You died in the patio"
+        deathMsg: "You died on the patio as the moon smiled down from above."
     },
     {
         roomName: "Sunroom",
@@ -397,7 +397,7 @@ module.exports = [
                 {
                     userResponse: "Leave the room",
                     resolutionMessage: "The plasticness of it all skeeves you out, you swiftly exit the room.",
-                    severity: "high"
+                    severity: "medium"
                 }
                 ]
             }
@@ -464,7 +464,7 @@ module.exports = [
                 nextRoom: '#'
             }
         ],
-        deathMsg: "You died in the graveyard"
+        deathMsg: "You died in the graveyard with fear in your heart."
     },
     {
         roomName: "Dining Room",
@@ -531,7 +531,7 @@ module.exports = [
                 nextRoom: 'First Floor Bathroom'
             }
         ],
-        deathMsg: "You died in the living room"
+        deathMsg: "You died in the living room as the light above the pool table burnt out with a snap."
     },
     {
         roomName: "Foyer",
@@ -576,7 +576,7 @@ module.exports = [
             }
            
         ],
-        deathMsg: "You died in the foyer"
+        deathMsg: "You died in the foyer, sinking deep into the rug."
     },
     {
         roomName: "First Floor Bathroom",
@@ -599,7 +599,7 @@ module.exports = [
                 nextRoom: '#'
               }
         ],
-        deathMsg: "You died in the first floor bathroom"
+        deathMsg: "You died in the first floor bathroom, writhing in the green light."
     },
     {
         roomName: "Kitchen",
@@ -643,7 +643,7 @@ module.exports = [
                 nextRoom: 'Second Floor Stairs'
             }
         ],
-        deathMsg: "You died in the kitchen"
+        deathMsg: "You died in the kitchen, dirtying those clean floors. How rude."
     },
     {
         roomName: "Second Floor Stairs",
