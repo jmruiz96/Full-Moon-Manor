@@ -5,12 +5,6 @@ import '../UserResponseButtons/userresponsebuttons.css';
 import { useLifeCountContext } from "../../utils/LifeCountContext";
 
 export const UserResponseButtons = ({ userResponse, setEventResolution, setVisibility }) => {
-  useEffect(() => {
-    setEventResolution("");
-    setVisibility('hidden')
-  }, []);
-
-  // console.log('user btn')
 
   const { lifeCount, setLifeCount } = useLifeCountContext();
   const handleEventClick = (severity) => {
@@ -29,7 +23,7 @@ export const UserResponseButtons = ({ userResponse, setEventResolution, setVisib
       <h2 id='type'>What would you like to do?</h2>
       {userResponse.eventOutcome.map((response, index) => {
         return (
-          <Button variant='secondary' className='customButton' id='btn-font' key={`response-index: ${index}`} as="input" type="button" value={response.userResponse} data-severity={response.severity} data-message={response.resolutionMessage} onClick={(e) => {
+          <Button variant='secondary' className='my-2' id='btn-font' key={`response-index: ${index}`} as="input" type="button" value={response.userResponse} data-severity={response.severity} data-message={response.resolutionMessage} onClick={(e) => {
             console.log(e.target);
             setEventResolution(response.resolutionMessage);
             handleEventClick(response.severity);
