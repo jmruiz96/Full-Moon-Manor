@@ -1,11 +1,14 @@
 .set {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  /* position: fixed; */
+  float: right;
+  clear: both;
+  /* bottom: 0;
+  right: 0; */
   overflow: hidden;
   padding: 30px;
   text-align: center;
   z-index: 1;
+  background: transparent;
 }
 
 .set .o-pad {
@@ -259,4 +262,10 @@
 
 .o-pad.right a.right:after {
   border-left-color: #333;
+}
+
+@media screen and (max-width: 665px) {
+  .set {
+    float: none;
+  }
 }

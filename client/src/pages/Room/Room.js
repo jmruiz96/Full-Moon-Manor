@@ -28,7 +28,7 @@ export const Room = () => {
                             </Link>
                         </>
                     ) : (
-                        <div className='d-flex w-100'>
+                        <div className='d-flex w-100 custom-spacing'>
                             <Sidebar adventureState={adventureState} />
                             <div className='mx-auto w-80'>
                                 <LifeCount />

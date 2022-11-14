@@ -79,10 +79,10 @@ export const Content = ({ adventureState, setAdventureState }) => {
                         <h1>{`${room.roomName} has an event`}</h1>
                         <p className='room_message'>{room.message}</p>
                         <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} setVisibility={setVisibility} />
-                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={visibility} setVisibility={setVisibility} setAdventureState={setAdventureState} />
                         <div>
                             <p className='room_message'>{eventResolution}</p>
                         </div>
+                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={visibility} setVisibility={setVisibility} setAdventureState={setAdventureState} />
                     </div>
             )
             }
