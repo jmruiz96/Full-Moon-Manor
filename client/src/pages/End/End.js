@@ -28,7 +28,8 @@ export const End = () => {
 
     return (
         <div className= 'text-center'>
-            <p id='death_message'className='text-danger'>{deathMsg}</p>
+            <h1 className='text-danger' id='you_dead'>You Died</h1>
+            <p id='death_message'>{deathMsg}</p>
             <Button variant='secondary' type="button" onClick={() => {
                 addAdventureHandler();
                 navigate('/me');
