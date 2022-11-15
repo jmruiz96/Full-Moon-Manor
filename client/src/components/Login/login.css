@@ -5,3 +5,9 @@
     font-size: 20px;
 }
 
+.form-input {
+    font-size: 15px;
+    margin-right: 10px;
+    letter-spacing: 1.5px;
+    max-width: 100px;
+}

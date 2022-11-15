@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_ADVENTURES } from '../../utils/mutations';
 
+import './end.css'
+
 export const End = () => {
     const location = useLocation();
     const adventureState = location.state.adventureState;
@@ -25,8 +27,8 @@ export const End = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
-            <p>{deathMsg}</p>
+        <div className= 'text-center'>
+            <p id='death_message'className='text-danger'>{deathMsg}</p>
             <Button variant='secondary' type="button" onClick={() => {
                 addAdventureHandler();
                 navigate('/me');
