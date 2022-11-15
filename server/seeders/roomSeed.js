@@ -34,13 +34,13 @@ module.exports = [
                     severity: "low"
                 },
                 {
-                    userResponse: "Attemt to close the furnace",
-                    resolutionMessage: "You muster your strength and move towards the furnace, but as you try and swing the door close fire leaps out and burns you. This firely metal contraption hellish heat rages on...it's time to move on to try and find a way out.",
+                    userResponse: "Attempt to close the furnace",
+                    resolutionMessage: "You muster your strength and move towards the furnace, but as you try and swing the door close fire leaps out and burns you. This firey metal contraption hellish heat rages on...it's time to move on to try and find a way out.",
                     severity: "high"
                 },
                 {
                     userResponse: "Look for an off valve",
-                    resolutionMessage: "As you search for some sort of valve or lever to halt this assault of heat, you begin to feel exhausted and it takes a toll on you. This investagation is to no avail, you need to push foward to hopefully find an exit.",
+                    resolutionMessage: "As you search for some sort of valve or lever to halt this assault of heat, you begin to feel exhausted and it takes a toll on you. You turn a sqeaky wheel and you think the flames died down a bit but, you need to push forward to hopefully find an exit.",
                     severity: "medium"
                 }
                 ]
@@ -108,11 +108,11 @@ module.exports = [
                 nextRoom: '#'
             },
         ],
-        deathMsg: "As you gulp down the red liquid, the room begins to spin and your vison blurs. You fall foward, knocking over the tabel and everything on it. Just before you slip out of consciousness, you hear the a faint splash of footsteps against the wet floor..."
+        deathMsg: "As you gulp down the red liquid, the room begins to spin and your vision blurs. You fall forward, knocking over the table and everything on it. Just before you slip out of consciousness, you hear the faint splash of footsteps against the wet floor..."
     },
     {
         roomName: "Store Room",
-        message: "Upon opening this door you find a room with a dangling lightbulb which pulses with a dim light that illuminates the shadows. As you move through the room this blinking light reveals empty cages and shelves lined with jars full of oddities in greenish solution. You hear the skittering of many small feet dart along a wall. Behind you is a door with a reddish glow gleaming through the cracks around it, to the left is a door where there is some red liquid seeping out from below, and on the right seems to be a small metal door. ",
+        message: "Upon opening this door you find a room with a dangling light bulb which pulses with a dim light that illuminates the shadows. As you move through the room this blinking light reveals empty cages and shelves lined with jars full of oddities in greenish solution. You hear the skittering of many small feet dart along a wall. Behind you is a door with a reddish glow gleaming through the cracks, to the left is a door where there is some red liquid seeping out from below, and on the right seems to be a small metal door. ",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -140,7 +140,7 @@ module.exports = [
         event: [
             {
                 eventOutcome: [{
-                    userResponse: "Try and open the coffin",
+                    userResponse: "Try to open the coffin",
                     resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off open and before its fully a foul gas creeps outs and a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
                     severity: "high"
                 },
@@ -175,7 +175,7 @@ module.exports = [
                 nextRoom: 'Furnace'
             },
         ],
-        deathMsg: "You cannot stop choking and coughing whatever was released into the air is burning in you lungs, you hear the hard thud of a heavy stone lid hitting the floor. Through your own tears you can bearly see a shambling and rotting outline of a being that drags you into the stoney casket and everything goes dark... "
+        deathMsg: "You cannot stop choking and coughing whatever was released into the air is burning in you lungs, you hear the hard thud of a heavy stone lid hitting the floor. Through your own tears you can barely see a shambling and rotting outline of a being that drags you into the stoney casket and everything goes dark... "
     },
     {
         roomName: "Elevator",
@@ -336,7 +336,7 @@ module.exports = [
     },
     {
         roomName: "Patio",
-        message: "You walk out onto a patio paved hith heavy stone. There is a set of wrought-iron patio furniture: table, chairs, chaise lounge. You also see a self-standing hammock rolled up in the corner. Tall, thick shrubs stand above a low stone border wall bordering all sides except for one: a break in the wall with a sheer drop-off to a roaring river below. You peer over the edge, vertigo quickly washing over you.",
+        message: "You walk out onto a patio paved with heavy stone. There is a set of wrought-iron patio furniture: table, chairs, chaise lounge. You also see a self-standing hammock rolled up in the corner. Tall, thick shrubs stand above a low stone border wall bordering all sides except for one: a break in the wall with a sheer drop-off to a roaring river below. You peer over the edge, vertigo quickly washing over you.",
         
         event: [
             {
@@ -468,7 +468,7 @@ module.exports = [
     },
     {
         roomName: "Dining Room",
-        message: "You enter the dining room and find a grand, long dining table made from heavy wood. This is unsurprising. But that table is absolutely loaded with spoons of various sizes and materials. This is more suprising.",
+        message: "You enter the dining room and find a grand, long dining table made from heavy wood. This is unsurprising. But that table is absolutely loaded with spoons of various sizes and materials. This is more surprising.",
         direction: [
             {
                 userDirection: 'up',
@@ -868,7 +868,7 @@ module.exports = [
               }
             
         ],
-        deathMsg: "Your life force was sucked into the pentagram as you hear weird chants in the background. Turns out you were the latest sacrifice to summon a cults dark god, as you lay dying someone thanks you for your service as you hear the screams of the masses coming from outside"
+        deathMsg: "Your life force was sucked into the pentagram as you hear weird chants in the background. Turns out you were the latest sacrifice to summon a cult's dark god, as you lay dying someone thanks you for your service as you hear the screams of the masses coming from outside"
     },
     {
         roomName: "Laboratory",
@@ -939,7 +939,7 @@ module.exports = [
     },
     {
         roomName: "Attic",
-        message: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in direclty behind you like it was following you. Too late do you realize staring at it turned you to stone too",
+        message: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in directly behind you like it was following you. Too late do you realize staring at it turned you to stone too",
         
         event: [
             {
@@ -961,7 +961,7 @@ module.exports = [
                 ]
             }
         ],
-        deathMsg: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in direclty behind you like it was following you. Too late do you realize staring at it turned you to stone too. Your trapped here forever."
+        deathMsg: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in directly behind you like it was following you. Too late do you realize staring at it turned you to stone too. Your trapped here forever."
     },
     {
         roomName: "Safe Exit",
