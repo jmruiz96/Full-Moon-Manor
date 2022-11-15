@@ -141,13 +141,13 @@ module.exports = [
             {
                 eventOutcome: [{
                     userResponse: "Try and open the coffin",
-                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off and before its fully a foul gas creeps outs and open a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
+                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off open and before its fully a foul gas creeps outs and a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
                     severity: "high"
                 },
                 {
                     userResponse: "Reach for remains in the wall",
                     resolutionMessage: "As you go to grab one of the containers in the wall, it falls out of its place in the wall and shatters, shooting human remains across the floor. You get a whiff of something rank and begin to cough and choke. You have to get out of here before it's too late",
-                    severity: "high"
+                    severity: "medium"
                 },
                 {
                     userResponse: "Ignore that and push on",
@@ -491,7 +491,7 @@ module.exports = [
     },
      {
         roomName: "Living Room",
-        message: "In the living room, you find a very comfortable-looing sofa in front of a roaring fireplace. There's a pool table as well, with the balls arranged perfectly for the opening break.",
+        message: "In the living room, you find a very comfortable-looking sofa in front of a roaring fireplace. There's a pool table as well, with the balls arranged perfectly for the opening break.",
         
         event: [
             {
@@ -580,7 +580,7 @@ module.exports = [
     },
     {
         roomName: "First Floor Bathroom",
-        message: "The first floor bathroom if clean but old fashioned. For some reason, the light bulb is green. It bathes the room with its cool glow.",
+        message: "The first floor bathroom is clean but old fashioned. For some reason, the light bulb is green. It bathes the room with its cool glow.",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -738,7 +738,7 @@ module.exports = [
     },
     {
         roomName: "Bedroom 2",
-        message: "You open the door into an inviting bedroom, much nicer and cleaner than all the rest of the rooms in this haunted home. Moonlight streams from the open window in front of you, a light breeze can be felt coming from it. Behind you is a door with an eerie red light coming from the other side. On the other side of the room, you spot an open closet with some clothes in it. You hear something trying to open the door to your right you.",
+        message: "You open the door into an inviting bedroom, much nicer and cleaner than all the rest of the rooms in this haunted home. Moonlight streams from the open window in front of you, a light breeze can be felt coming from it. Behind you is a door with an eerie red light coming from the other side. On the other side of the room, you spot an open closet with some clothes in it. You hear something trying to open the door to your right.",
     
         event: [
             {
