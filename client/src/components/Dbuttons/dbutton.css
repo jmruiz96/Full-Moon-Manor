@@ -1,9 +1,6 @@
 .set {
-  /* position: fixed; */
   float: right;
   clear: both;
-  /* bottom: 0;
-  right: 0; */
   overflow: hidden;
   padding: 30px;
   text-align: center;
