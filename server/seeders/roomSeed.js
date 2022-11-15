@@ -738,7 +738,7 @@ module.exports = [
     },
     {
         roomName: "Bedroom 2",
-        message: "You open the door into an inviting bedroom, much nicer and cleaner than all the rest of the rooms in this haunted home. Moonlight streams from the open window to the right of you, a light breeze can be felt coming from it. To the left you see a door with an eerie red light coming from the other side. On the other side of the room, you spot an open closet with some clothes in it. You hear something trying to open the door behind you.",
+        message: "You open the door into an inviting bedroom, much nicer and cleaner than all the rest of the rooms in this haunted home. Moonlight streams from the open window in front of you, a light breeze can be felt coming from it. Behind you is a door with an eerie red light coming from the other side. On the other side of the room, you spot an open closet with some clothes in it. You hear something trying to open the door to your right you.",
     
         event: [
             {
@@ -827,7 +827,7 @@ module.exports = [
     },
     {
         roomName: "Pentagram Chamber",
-        message: "You find yourself in what seems to be a ritual chamber, an alter situated in the middle of the room has a large pentagram glowing on it. The pentagram radiates with a red glow, and you feel drawn to it like something is calling you to come closer. The walls of this place seem to be made out of stone with glowing symbols scrawled all over the place. There are 3 doors in this room, one leading to the hallway. Another going to the bedroom and the last towards a dark room with a ladder leading to the attic. On the pedestal next to the alter is an open book with weird symbols all over it.",
+        message: "You find yourself in what seems to be a ritual chamber, an alter situated in the middle of the room has a large pentagram glowing on it. The pentagram radiates with a red glow, and you feel drawn to it like something is calling you to come closer. The walls of this place seem to be made out of stone with glowing symbols scrawled all over the place. There are 3 doors in this room, one leading to the hallway, another going to the bedroom, and behind you a dark room with a ladder leading to the attic. On the pedestal next to the alter is an open book with weird symbols all over it.",
     
         event: [
             {
@@ -895,7 +895,7 @@ module.exports = [
     },
     {
         roomName: "Master Bedroom",
-        message: "The large room opens before you, a large bed sits in the middle of the room. In front of the bed is a dresser that has a TV sitting on top of it. There's nothing but static on the tv but the remote is resting right next to it. A door to the creepy attic is on one side of the room, on the other is a metal door that says lab on it. The last door leads to the hallway, and there's a broken window with a branch in front of it.",
+        message: "The large room opens before you, a large bed sits in the middle of the room. In front of the bed is a dresser that has a TV sitting on top of it. There's nothing but static on the tv but the remote is resting right next to it. A door to the creepy attic is to your left, on the other is a metal door that says \'Lab\' on it. The last door leads to the hallway, and there's a broken window with a branch in front of it.",
 
         event: [
             {
@@ -911,7 +911,7 @@ module.exports = [
                 },
                 {
                     userResponse: "Watch TV",
-                    resolutionMessage: "You take the remote and see if you can change the channel but every time you flip through the channels a clear picture of a women seems to get closer and closer. Eventually the women climbs out of the tv and you feel your consciousness fading",
+                    resolutionMessage: "You take the remote and see if you can change the channel but every time you flip through the channels a clear picture of a woman seems to get closer and closer. Eventually the woman climbs out of the tv and you feel your consciousness fading",
                     severity: "high"
                 }
                 ]
@@ -935,7 +935,7 @@ module.exports = [
                 nextRoom: 'Attic'
             }
         ],
-        deathMsg: "You died in the master bedroom"
+        deathMsg: "In a panic, you try to jump out of the window, reaching for the branch that was seemingly within your grasp. Your fingertips touch the bark just long enough to feel the hard bough before it breaks and you plummet to the ground. The last thing you see before your vision goes dark is the full moon."
     },
     {
         roomName: "Attic",
@@ -961,15 +961,15 @@ module.exports = [
                 ]
             }
         ],
-        deathMsg: "Your trapped here forever."
+        deathMsg: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in direclty behind you like it was following you. Too late do you realize staring at it turned you to stone too. Your trapped here forever."
     },
     {
         roomName: "Safe Exit",
-        message: "You exit the house through the window and climb down to the sidewalk your safe.",
+        message: "You exit the house through the window and climb down to the sidewalk to your safety. You muster every bit of energy to run as far and as fast as you can until you see a car driving down the road. You wave it down, and the couple inside are kind enough to drive you back home. After you get settled in the back seat, you decide to close your eyes.",
     },
     {
         roomName: "Dangerous Exit",
-        message: "You jumped out of the window onto the branch, which then fell with you on it.",
+        message: "You jump out of the window onto the branch, which then fell with you on it. You are hurt but can still walk. Even with the pain, you muster every bit of energy to run as far and as fast as you can until you see a car driving down the road. You wave it down, and the couple inside are kind enough to drive you back home. After you get settled in the back seat, you decide to close your eyes.",
         deathMsg: "The branch crushed you when you hit the ground"
     },
 ]

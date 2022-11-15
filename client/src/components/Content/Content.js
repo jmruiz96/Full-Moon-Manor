@@ -58,7 +58,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
                 Auth.loggedIn() && room.event.length === 0 ?
                     // If room has no event, render this 
                     <div className='text-center w-65 mx-auto'>
-                        <h1>{room.roomName}</h1>
+                        <h1 className='text-danger'>{room.roomName}</h1>
                         <p className='room_message'>{room.message}</p>
                         <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={"visible"} setVisibility={setVisibility} setAdventureState={setAdventureState} />
                         {(room.roomName === "Safe Exit" || (room.roomName === "Dangerous Exit"))
@@ -72,7 +72,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
                     </div> :
                     // If room has event, render this
                     <div className='text-center w-65 mx-auto p-3'>
-                        <h1>{room.roomName}</h1>
+                        <h1 className='text-danger'>{room.roomName}</h1>
                         <p className='room_message'>{room.message}</p>
                         <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} setVisibility={setVisibility} />
                         <div>
