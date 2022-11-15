@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger');
 
-#death_message {
+#you_dead {
     font-family: 'Jolly Lodger', cursive;
     font-size: 100px;
     animation: fadeIn 5s;
 }
 
-@keyframes fadeIn {
+  #death_message {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 30px;
+    letter-spacing: 1.25px;
+    animation: fadeIn 5s;
+   }
+
+   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
