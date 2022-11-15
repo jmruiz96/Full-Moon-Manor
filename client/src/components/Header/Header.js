@@ -18,7 +18,7 @@ const AppNavbar = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='justify-content-end'>
-            <Nav className='ml-auto'>
+            <Nav className='text-end'>
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to='/me'>

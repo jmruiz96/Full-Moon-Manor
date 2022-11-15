@@ -1,9 +1,8 @@
 .home-page-styling {
-    height: 70vh;
+    height: 100%;
     font-family: 'Jolly Lodger', cursive;
     font-size: 24px;
     letter-spacing: 1.5px;
-    overflow: auto;
 }
 
 .home-page-styling h5 {
