@@ -36,11 +36,6 @@ userSchema.virtual('fullName')
         this.set({ firstName: first, lastName: last });
     });
 
-// userSchema.virtual('adventuresList')
-//     .get(function () {
-//         return this.adventures.length
-//     });
-
 //Hashing user password on signup
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
