@@ -64,7 +64,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
                         {(room.roomName === "Safe Exit" || (room.roomName === "Dangerous Exit"))
                             &&
                             <div>
-                                <Button type="button" onClick={() => {
+                                <Button variant='secondary' type="button" onClick={() => {
                                     saveAdventureHandler();
                                     navigate("/me")
                                 }}>See your adventures...</Button>

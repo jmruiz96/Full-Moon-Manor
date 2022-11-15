@@ -36,7 +36,7 @@ export const Profile = () => {
                     You need to be logged in to see this.
                 </h4>
                 <Link to="/">
-                    <Button type="button"> Go Back </Button>
+                    <Button variant='secondary' type="button"> Go Back </Button>
                 </Link>
             </>
         )
