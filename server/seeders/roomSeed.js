@@ -1,7 +1,7 @@
 module.exports = [
     {
         roomName: "Torture Room",
-        message: "You open your eyes slowly, groggily becoming aware of your surroundings. Before your vision fully clears the dank and musty smell of stagnate air hits your nostrils. As you peer through the darkness you cannot seem to remember where you are or how you came to be here. There is no light in this room but as you pull yourself up off the ground you can make out a table with what look like cold metal tools strewn about. Spilling out from underneath what you hope to be unlocked doors, you notice a dark liquid creeps from the one ahead of you and to the right a flickering of red light. What direction will you go?",
+        message: "You open your eyes slowly, groggily becoming aware of your surroundings. Before your vision fully clears, the dank and musty smell of stagnant air hits your nostrils. As you peer through the darkness you cannot seem to remember where you are or how you came to be here. There is no light in this room but as you pull yourself up off the ground you can make out a table with what looks like cold metal tools strewn about. Spilling out from underneath what you hope to be unlocked doors, you notice a dark liquid creeping from the one ahead of you and to the right a flickering of red light. What direction will you go?",
         direction: [
             {
                 userDirection: 'up',
@@ -20,12 +20,11 @@ module.exports = [
                 nextRoom: '#'
             }
         ],
-        deathMsg: "You did it! You broke this game, some how you died in the first room!?"
+        deathMsg: "You did it! You broke this game, somehow you died in the first room!?"
     },
     {
         roomName: "Furnace",
-        message: "As you enter this room you are greeted with a blast of heat as you see an open furnace with raging flames. It reeks of burning flesh and hair, the stench overpowers the air and gags you. As you try to cover your face, you know you can run back through the door on the left to the room you woke up in, or across from you there is a door on the right with strange symbols carved into it, and ahead of you there appears to be a plain wooden door.",
-        
+        message: "As you enter this room you are greeted with a blast of heat as you see an open furnace with raging flames. It reeks of burning flesh and hair, the stench overpowering the air and gagging you. As you try to cover your face, you know you can run back through the door on the left to the room you woke up in, or across from you there is a door on the right with strange symbols carved into it, and ahead of you there appears to be a plain wooden door.",
         event: [
             {
                 eventOutcome: [{
@@ -35,12 +34,12 @@ module.exports = [
                 },
                 {
                     userResponse: "Attempt to close the furnace",
-                    resolutionMessage: "You muster your strength and move towards the furnace, but as you try and swing the door close fire leaps out and burns you. This firey metal contraption hellish heat rages on...it's time to move on to try and find a way out.",
+                    resolutionMessage: "You muster your strength and move towards the furnace, but as you try and swing the door closed fire leaps out and burns you. The fiery metal contraption's hellish heat rages on...it's time to move on to try and find a way out.",
                     severity: "high"
                 },
                 {
                     userResponse: "Look for an off valve",
-                    resolutionMessage: "As you search for some sort of valve or lever to halt this assault of heat, you begin to feel exhausted and it takes a toll on you. You turn a sqeaky wheel and you think the flames died down a bit but, you need to push forward to hopefully find an exit.",
+                    resolutionMessage: "As you search for some sort of valve or lever to halt this assault of heat, you begin to feel exhausted and it takes a toll on you. You turn a sqeaky wheel and you think the flames died down a bit, but you need to push forward to hopefully find an exit.",
                     severity: "medium"
                 }
                 ]
@@ -64,17 +63,16 @@ module.exports = [
                 nextRoom: 'Torture Room'
             }
         ],
-        deathMsg: "You feel the subduing heat clobber you down, you become too exhausted to continue on. Collapsing down to the floor, you stare into the engulfing flames... as you yourself are extinguished."
+        deathMsg: "You feel the subduing heat clobber you down and become too exhausted to continue on. Collapsing down to the floor, you stare into the engulfing flames... as you yourself are extinguished."
     },
     {
         roomName: "Wine Cellar",
-        message: "As you carefully step into this room, trying to avoid the red liquid sprawled out over the floor you see the walls are lined with what you assume are wine barrels. In the center of the room is a table with a small candle, a half-full chalice, and an open cask slowly leaking wine all over the place, the wine smells spoiled as an abrasive and sharp vinegar scent floods your nose. You walk to the table and know behind you is the door leading to where you awoke, and to the right there is a plain wooden door where you notice a flickering light beneath the door.",
-        
+        message: "As you carefully step into this room, trying to avoid the red liquid sprawled out over the floor you see the walls are lined with what you assume are wine barrels. In the center of the room is a table with a small candle, a half-full chalice, and an open cask slowly leaking wine all over the place. The wine smells spoiled as an abrasive and sharp vinegar scent floods your nose. You walk to the table and know behind you is the door leading to where you awoke, and to the right there is a plain wooden door where you notice a flickering light beneath the door.",
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Take a sip from the cup",
-                    resolutionMessage: "You pick up the chalice, it is embossed with unsettling images. As you put the cup to your lips the liquid it contains doesn't share the vinegary note of the room. You taste the thick burgundy liquid, it has an eerie metallic taste to it. Your stomach immediately turns and you feel nauseated, you need to get out of here.",
+                    resolutionMessage: "You pick up the chalice, it is embossed with unsettling images. As you put the cup to your lips, the liquid it contains doesn't share the vinegary note of the room. You taste the thick burgundy liquid, it has an eerie metallic taste to it. Your stomach immediately turns and you feel nauseated, you need to get out of here.",
                     severity: "high"
                 },
                 {
@@ -84,7 +82,7 @@ module.exports = [
                 },
                 {
                     userResponse: "Take a sip from the cask",
-                    resolutionMessage: "You go to take a sip from the opened cask, as soon as the spoiled wine hits your stomach you feel queasy. You can manage the nausea and it is time to move on. ",
+                    resolutionMessage: "You go to take a sip from the opened cask, and as soon as the spoiled wine hits your stomach you feel queasy. You can manage the nausea and it is time to move on. ",
                     severity: "medium"
                 }
                 ]
@@ -112,7 +110,7 @@ module.exports = [
     },
     {
         roomName: "Store Room",
-        message: "Upon opening this door you find a room with a dangling light bulb which pulses with a dim light that illuminates the shadows. As you move through the room this blinking light reveals empty cages and shelves lined with jars full of oddities in greenish solution. You hear the skittering of many small feet dart along a wall. Behind you is a door with a reddish glow gleaming through the cracks, to the left is a door where there is some red liquid seeping out from below, and on the right seems to be a small metal door. ",
+        message: "Upon opening this door you find a room with a dangling light bulb which pulses with a dim light that illuminates the shadows. As you move through the room this blinking light reveals empty cages and shelves lined with jars full of oddities in a greenish solution. You hear the skittering of many small feet dart along a wall. Behind you is a door with a reddish glow gleaming through the cracks, to the left is a door where there is some red liquid seeping out from below, and on the right seems to be a small metal door. ",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -135,13 +133,12 @@ module.exports = [
     },
     {
         roomName: "Crypt",
-        message: "You slink past this door with strange symbols carved into only to find a room illuminated by a small window with moonlight pouring through it. There are alcoves indented and spaced even along all the walls containing urns and reliquaries. Beneath the high window lies an built in altar with a long stone coffin atop it. To the left is the door with a red flickering glow emanating from bottom, and ahead of you is the small metal door. Wait, was there a sound that came from the coffin?",
-        
+        message: "You slink past this door with strange symbols carved into it, only to find a room illuminated by a small window with moonlight pouring through it. There are alcoves indented and spaced even along all the walls containing urns and reliquaries. Beneath the high window lies a built-in altar with a long stone coffin atop it. To the left is the door with a red flickering glow emanating from the bottom, and ahead of you is the small metal door. Wait, was there a sound that came from the coffin?",
         event: [
             {
                 eventOutcome: [{
                     userResponse: "Try to open the coffin",
-                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off and before its fully open a foul gas creeps outs and a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
+                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off and before it's fully open a foul gas creeps out and a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
                     severity: "high"
                 },
                 {
@@ -151,7 +148,7 @@ module.exports = [
                 },
                 {
                     userResponse: "Ignore that and push on",
-                    resolutionMessage: "You are pretty sure you actully-didn't-hear anything and want to push on to the next room",
+                    resolutionMessage: "You are pretty sure you actually didn't hear anything and want to push on to the next room",
                     severity: "low"
                 }
                 ]
@@ -175,11 +172,11 @@ module.exports = [
                 nextRoom: 'Furnace'
             },
         ],
-        deathMsg: "You cannot stop choking and coughing whatever was released into the air is burning in you lungs, you hear the hard thud of a heavy stone lid hitting the floor. Through your own tears you can barely see a shambling and rotting outline of a being that drags you into the stoney casket and everything goes dark... "
+        deathMsg: "You cannot stop choking and coughing and whatever was released into the air is burning in you lungs. You hear the hard thud of a heavy stone lid hitting the floor. Through your own tears you can barely see a shambling and rotting outline of a being that drags you into the stoney casket and everything goes dark... "
     },
     {
         roomName: "Elevator",
-        message: "You enter the room and see what looks like an old elevator with a rickety old gate, is this your way out?! You throw open the gate and try to hit any button to take you away from here. None of the buttons light up. After trying everything you can think of you realize that escaping won't be that easy.  As you take a step out you see behind you is the door with strange symbols painted onto it, on your left is a door with a blinking light shining beneath it, and to the right is a door with an arrow point up etched into it.",
+        message: "You enter the room and see what looks like an old elevator with a rickety old gate, is this your way out?! You throw open the gate and try to hit any button to take you away from here. None of the buttons light up. After trying everything you can think of you realize that escaping won't be that easy.  As you take a step out you see behind you the door with strange symbols painted onto it, on your left is a door with a blinking light shining beneath it, and to the right is a door with an arrow pointing up etched into it.",
         direction: [
             {
                 userDirection: 'up btn disabled',
@@ -198,11 +195,11 @@ module.exports = [
                 nextRoom: 'Store Room'
             }
         ],
-        deathMsg: "You died in the elevator, it goes down straight to... an bad afterlife :("
+        deathMsg: "You died in the elevator, it goes down straight to... a bad afterlife :("
     },
     {
         roomName: "First Floor Stairs",
-        message: "You find yourself on a set of creaky stairs. The slightest chill breeze meets you from below. And was that a moaning you hear? ",
+        message: "You find yourself on a set of creaky stairs. The slightest chilly breeze meets you from below. And was that a moaning you hear? ",
         direction: [
             {
                 userDirection: 'up',
@@ -249,7 +246,6 @@ module.exports = [
     {
         roomName: "Study",
         message: "You enter a richly appointed study. All dark leather and wood, the rich smell of cognac hits your nostrils. There's an immense desk facing away from the window, it seems to be so heavy it must have grown up with the house itself. A phonograph plays on a spindly side table, the record skipping and repeating the lyric 'And in the end, we all fall down/We all float down here below'.",
-        
         event: [
             {
                 eventOutcome: [{
@@ -288,12 +284,11 @@ module.exports = [
                 nextRoom: 'First Floor Landing'
             },
         ],
-        deathMsg: "You died in the study as the smell of burnt hair instensifies."
+        deathMsg: "You died in the study as the smell of burnt hair intensifies."
     },
     {
         roomName: "Game Room",
         message: "A menagerie of animal busts stare down at you from the walls, an almost unbelievable number packing every available inch of wall space. Beasts both great and small and some that you can't quite identify, they give the air of unknown worlds and deep forbidden places. You notice a bar cart laden with liquor bottles, including the Scotch you remember your grandfather always had on hand.",
-        
         event: [
             {
                 eventOutcome: [{
@@ -332,12 +327,11 @@ module.exports = [
                 nextRoom: 'First Floor Landing'
             },
         ],
-        deathMsg: "You died in the game room"
+        deathMsg: "As you cough and hack, you feel the wet walls of your throat start to close together. You grasp your neck as the lights start to fade and sweet, life-giving oxygen leaves you one last time. You die on the floor of the game room with your beastly friends keeping watch over you from above."
     },
     {
         roomName: "Patio",
         message: "You walk out onto a patio paved with heavy stone. There is a set of wrought-iron patio furniture: table, chairs, chaise lounge. You also see a self-standing hammock rolled up in the corner. Tall, thick shrubs stand above a low stone border wall bordering all sides except for one: a break in the wall with a sheer drop-off to a roaring river below. You peer over the edge, vertigo quickly washing over you.",
-        
         event: [
             {
                 eventOutcome: [{
@@ -376,12 +370,11 @@ module.exports = [
                 nextRoom: 'Sunroom'
             },
         ],
-        deathMsg: "You died on the patio as the moon smiled down from above."
+        deathMsg: "You step back from the edge, a bit too quickly! A loose paving stone gives way under your foot, sending a rain of stone and rubble down into the river. You fall hard on your tailbone and another chunk of paving stones give way beneath you. You tumble over the cliff, desperately trying to find purchase with a branch or rock. To no avail, sadly. You fall screaming and die a watery death in the river below."
     },
     {
         roomName: "Sunroom",
         message: "You step into the sunroom. Cheap wicker furniture surrounds a low glass-topped coffee table, also in wicker. A deck of cards lies on the table, scattered. Whoever was playing seems to have left in a hurry. Curiously, a pile of wet towels, about as high as your waist, sits next to the door on your right.",
-        
         event: [
             {
                 eventOutcome: [{
@@ -420,12 +413,11 @@ module.exports = [
                 nextRoom: 'Graveyard'
             },
         ],
-        deathMsg: "You died in the sunroom"
+        deathMsg: "You investigate the tower of towels more closely to find that they seem to be soaked in some kind of alcohol, the sharp scent is overpowering and makes you feel light-headed. For some reason, you feel this is a good time to take a nap, just to rest your eyes. As you begin to fall into a slumber, you hear footsteps. This will be your final resting place."
     },
     {
         roomName: "Graveyard",
         message: "You find yourself in a backyard graveyard, speckled with old, crumbling headstones and swathed in a low fog. The entire yard is ringed in 12ft high iron fences with sharp spikes along the top. You see a wheelbarrow among the headstones with a shovel leaning against it.",
-        
         event: [
             {
                 eventOutcome: [{
@@ -536,7 +528,6 @@ module.exports = [
     {
         roomName: "Foyer",
         message: "In the foyer, you see a beautiful flower arrangement sitting in the center of the room on an elegant wood and glass table.",
-
         event: [
             {
                 eventOutcome: [{
@@ -604,7 +595,6 @@ module.exports = [
     {
         roomName: "Kitchen",
         message: "The kitchen is large and scrupulously clean. It could easily prepare a meal large enough for a military brigade or a marching band, with room to spare. You see a craggly loaf of sourdough bread sitting on a cutting board on the counter in the center of the room. You can tell by your nose that it's fresh.",
-
         event: [
             {
                 eventOutcome: [{
@@ -672,7 +662,6 @@ module.exports = [
     {
         roomName: "Bedroom 1",
         message: "You open the wooden door leading into a bedroom filled to the brim with dolls and plushies. The dolls dead eyes all seem to fixate on you as you come into the room the only light coming from the moonlight seeping through the window. A red headed doll wearing a frilly black goth outfit and heavy black makeup the size of a child is sitting on the bed making eye contact with you. There is another door to the right of the room, the sound of waterdrops hitting a surface can be heard in the distance. You can hear a faint voice singing a lullaby in the room.",
-    
         event: [
             {
                 eventOutcome: [{
@@ -782,8 +771,7 @@ module.exports = [
     },
     {
         roomName: "Creaky Hallway",
-        message: "You find yourself in a long dark hallway, every step you take creaks the old wooden floors. At the end of the hallway is a door with an eerie red glow coming from behind it, on the opposite end are the stairs to the first floor. Two doors flank either side of the hallway, one is large and ornate with weird symbols written on it. The other is a regular wooden door but you can hear the faint sound of waterdrops coming from the other side of it. A sudden creek of the floorboards startles you into action.",
-    
+        message: "You find yourself in a long dark hallway, every step you take creaks the old wooden floors. At the end of the hallway is a door with an eerie red glow coming from behind it, on the opposite end are the stairs to the first floor. Two doors flank either side of the hallway, one is large and ornate with weird symbols written on it. The other is a regular wooden door but you can hear the faint sound of waterdrops coming from the other side of it. A sudden creek of the floorboards startles you into action.", 
         event: [
             {
                 eventOutcome: [{
@@ -828,7 +816,6 @@ module.exports = [
     {
         roomName: "Pentagram Chamber",
         message: "You find yourself in what seems to be a ritual chamber, an alter situated in the middle of the room has a large pentagram glowing on it. The pentagram radiates with a red glow, and you feel drawn to it like something is calling you to come closer. The walls of this place seem to be made out of stone with glowing symbols scrawled all over the place. There are 3 doors in this room, one leading to the hallway, another going to the bedroom, and behind you a dark room with a ladder leading to the attic. On the pedestal next to the alter is an open book with weird symbols all over it.",
-    
         event: [
             {
                 eventOutcome: [{
@@ -896,7 +883,6 @@ module.exports = [
     {
         roomName: "Master Bedroom",
         message: "The large room opens before you, a large bed sits in the middle of the room. In front of the bed is a dresser that has a TV sitting on top of it. There's nothing but static on the tv but the remote is resting right next to it. A door to the creepy attic is to your left, on the other is a metal door that says \'Lab\' on it. The last door leads to the hallway, and there's a broken window with a branch in front of it.",
-
         event: [
             {
                 eventOutcome: [{
@@ -940,7 +926,6 @@ module.exports = [
     {
         roomName: "Attic",
         message: "You climb up the ladder to the attic and notice that the place is filled with lifelike sculptures. Each one is extremely detailed and they all have clothes from different time periods. They all have this look of extreme terror on their faces like whatever they saw scared them into this state. Only too late do you notice that your body had become stiff and your breathing heavy. You turn around to see a statue you didnt see when you came in directly behind you like it was following you. Too late do you realize staring at it turned you to stone too",
-        
         event: [
             {
                 eventOutcome: [{
