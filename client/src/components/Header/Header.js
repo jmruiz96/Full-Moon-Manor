@@ -14,7 +14,7 @@ const AppNavbar = () => {
         <Navbar bg='dark' variant='dark' expand='lg'>
           <Container fluid id='container'>
             <Navbar.Brand as={Link} to='/' id='container'>
-              Haunted House
+              Full Moon Manor
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='navbar' />
             <Navbar.Collapse id='navbar' className='justify-content-end'>
