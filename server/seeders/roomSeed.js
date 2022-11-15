@@ -141,7 +141,7 @@ module.exports = [
             {
                 eventOutcome: [{
                     userResponse: "Try to open the coffin",
-                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off open and before its fully a foul gas creeps outs and a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
+                    resolutionMessage: "You need to know if something is rattling around inside this stone coffin. You use all of your strength to try and push the stone lid off and before its fully open a foul gas creeps outs and a boney hand grabs your wrist and cuts into it. You pull back and sprint for the door",
                     severity: "high"
                 },
                 {
