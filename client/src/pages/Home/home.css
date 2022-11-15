@@ -3,6 +3,7 @@
     font-family: 'Jolly Lodger', cursive;
     font-size: 24px;
     letter-spacing: 1.5px;
+    overflow: auto;
 }
 
 .home-page-styling h5 {
@@ -19,7 +20,7 @@
   }
 
 .home-page-styling > div {
-    width: 50%;
+    width: 60%;
 }
 
 @media screen and (max-width: 805px) {
