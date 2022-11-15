@@ -45,7 +45,7 @@ function App() {
             <div className="container-fluid px-0">
               <Header />
               
-              <div className='p-5'>
+              <div className='custom-container'>
                 <Routes>
                   <Route
                     path="/"

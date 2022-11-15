@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { UserResponseButtons } from '../../components/UserResponseButtons/UserResponseButtons'
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ROOM } from '../../utils/queries';
 import { useMutation } from '@apollo/client';
@@ -13,7 +13,6 @@ import { Button } from 'react-bootstrap';
 import './content.css'
 
 export const Content = ({ adventureState, setAdventureState }) => {
-    console.log('new content')
     const [eventResolution, setEventResolution] = useState("");
     const [visibility, setVisibility] = useState("hidden");
     const { lifeCount } = useLifeCountContext();
@@ -30,7 +29,6 @@ export const Content = ({ adventureState, setAdventureState }) => {
 
     };
 
-
     const navigate = useNavigate();
 
     const { roomName } = useParams();
@@ -39,12 +37,10 @@ export const Content = ({ adventureState, setAdventureState }) => {
         variables: { roomName }
     });
 
-    console.log(data)
     const room = data?.room || {};
 
     useEffect(() => {
-        setAdventureState(adventureState => [...adventureState, roomName]);
-        console.log(roomName);
+        setAdventureState(adventureState => [...adventureState, roomName])
     }, [roomName])
 
     if (loading) {
@@ -76,13 +72,13 @@ export const Content = ({ adventureState, setAdventureState }) => {
                     </div> :
                     // If room has event, render this
                     <div className='text-center w-65 mx-auto p-3'>
-                        <h1>{`${room.roomName} has an event`}</h1>
+                        <h1>{room.roomName}</h1>
                         <p className='room_message'>{room.message}</p>
                         <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} setVisibility={setVisibility} />
-                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={visibility} setVisibility={setVisibility} setAdventureState={setAdventureState} />
                         <div>
                             <p className='room_message'>{eventResolution}</p>
                         </div>
+                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={visibility} setVisibility={setVisibility} setAdventureState={setAdventureState} />
                     </div>
             )
             }

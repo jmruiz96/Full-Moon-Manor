@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import { UserResponseButtons } from '../../components/UserResponseButtons/UserResponseButtons'
-import { Link, useParams, Navigate } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_ROOM, QUERY_ME } from '../../utils/queries';
+import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import { DPad } from '../../components/Dbuttons/Dbutton';
 import { Sidebar } from '../../components/Aside/Aside'
-import { useLifeCountContext } from '../../utils/LifeCountContext'
 import { Content } from '../../components/Content/Content';
 import { LifeCount } from '../../components/LifeCount/LifeCount'
-
 import './room.css'
 
 export const Room = () => {
@@ -28,7 +22,7 @@ export const Room = () => {
                             </Link>
                         </>
                     ) : (
-                        <div className='d-flex w-100'>
+                        <div className='d-flex w-100 custom-spacing'>
                             <Sidebar adventureState={adventureState} />
                             <div className='mx-auto w-80'>
                                 <LifeCount />
