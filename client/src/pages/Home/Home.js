@@ -26,7 +26,7 @@ const Home = () => {
           </h5>
         </div>
         {Auth.loggedIn() ?
-          <Link to='/room/Torture Room'> <Button className='button-spacing' variant='danger'>Wake Up</Button> </Link>
+          <Link to='/room/Torture Room' state={{slug: "this is needed"}}> <Button className='button-spacing' variant='danger'>Wake Up</Button> </Link>
           :
           <p>Log in above to get started</p>
         }
