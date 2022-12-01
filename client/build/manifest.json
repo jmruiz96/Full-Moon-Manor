@@ -1,0 +1,20 @@
+{
+  "short_name": "Full Moon Manor",
+  "name": "Full Moon Manor",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "resized.png",
+      "type": "image/png",
+      "sizes": "260x260"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
