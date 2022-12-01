@@ -4,3 +4,13 @@
     font-family: 'Jolly Lodger', cursive;
     font-size: 30px;
 }
+
+.custom-life-spacing {
+    padding-right: 10px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0,0,0, .9);
+    box-shadow: 10px 10px 10px rgb(25, 23, 23);
+    display: block;
+    z-index: 100;
+}
