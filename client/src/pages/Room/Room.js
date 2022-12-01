@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, redirect, useLocation, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Sidebar } from '../../components/Aside/Aside'
 import { Content } from '../../components/Content/Content';
@@ -8,7 +8,16 @@ import { LifeCount } from '../../components/LifeCount/LifeCount'
 import './room.css'
 
 export const Room = () => {
-    const [adventureState, setAdventureState] = useState([])
+    const [adventureState, setAdventureState] = useState([]);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state === null) return navigate("/");
+        window.onbeforeunload = () => {
+            navigate('/');
+        };
+    }, []);
 
     return (
         <div>

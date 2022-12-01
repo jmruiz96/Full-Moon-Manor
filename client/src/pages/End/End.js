@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, redirect } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_ADVENTURES } from '../../utils/mutations';
 
@@ -10,6 +10,7 @@ export const End = () => {
     const location = useLocation();
     const adventureState = location.state.adventureState;
     const deathMsg = location.state.deathMsg;
+    const slug = location.state.slug;
 
     const [addAdventures, { error }] = useMutation(ADD_ADVENTURES)
 
@@ -25,6 +26,7 @@ export const End = () => {
     };
 
     const navigate = useNavigate();
+    if (!slug) return redirect("/")
 
     return (
         <div className= 'text-center'>
