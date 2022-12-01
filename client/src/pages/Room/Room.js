@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import { Link, redirect, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Sidebar } from '../../components/Aside/Aside'
 import { Content } from '../../components/Content/Content';
