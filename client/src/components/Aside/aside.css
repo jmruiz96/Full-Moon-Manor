@@ -11,8 +11,10 @@
     font-family: 'Creepster', cursive !important; 
 }
 
+
 li {
     font-size: 20px;
+    font-family: 'Creepster', cursive !important;
 }
 
 @media screen and (max-width: 800px) {

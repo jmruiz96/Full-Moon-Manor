@@ -71,7 +71,7 @@ export const Profile = () => {
                                             >
                                                 X
                                             </Button>
-                                            Adventure #{index + 1}
+                                            <p className='adventure'>Adventure #{index + 1}</p>
                                         </Accordion.Header>
                                         <Accordion.Body>
                                             <ul>

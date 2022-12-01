@@ -10,3 +10,12 @@
     font-family: "Creepster", cursive;
     letter-spacing: 1px;
 }
+
+.adventure {
+    font-family: "Jolly Lodger", cursive !important;
+    font-size: 30px;
+    color: black;
+    background: none;
+    margin-bottom: 0 !important;
+
+}
