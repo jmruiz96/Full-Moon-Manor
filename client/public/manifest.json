@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Full Moon Manor",
+  "name": "Full Moon Manor",
   "icons": [
     {
       "src": "favicon.ico",
@@ -14,7 +14,7 @@
     }
   ],
   "start_url": "/?source=pwa",
-  "display": "standalone",
+  "display": "fullscreen",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
