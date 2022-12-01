@@ -12,6 +12,7 @@ export const Room = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+ //Redirect to home if user tries to navigate directly to this page or try to reload
     useEffect(() => {
         if (location.state === null) return navigate("/");
         window.onbeforeunload = () => {
