@@ -14,7 +14,7 @@ import './content.css'
 
 export const Content = ({ adventureState, setAdventureState }) => {
     const [eventResolution, setEventResolution] = useState("");
-    const [visibility, setVisibility] = useState("hidden");
+    const [display, setDisplay] = useState("none");
     const { lifeCount } = useLifeCountContext();
     const [addAdventures, { error }] = useMutation(ADD_ADVENTURES);
 
@@ -51,7 +51,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
         <>
             <div>
                 {lifeCount <= 0 && navigate('/endgame', { state: { adventureState, deathMsg: room.deathMsg } })}
-                {room.roomName === "Attic" && navigate('/endgame', { state: { adventureState, deathMsg: room.deathMsg}})}
+                {room.roomName === "Attic" && navigate('/endgame', { state: { adventureState, deathMsg: room.deathMsg } })}
             </div>
             {(
                 // Checking if room has no event or event, render different XML
@@ -60,7 +60,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
                     <div className='text-center w-65 mx-auto'>
                         <h1 className='text-danger'>{room.roomName}</h1>
                         <p className='room_message'>{room.message}</p>
-                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={"visible"} setVisibility={setVisibility} setAdventureState={setAdventureState} />
+                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} display={"block"} setDisplay={setDisplay} setAdventureState={setAdventureState} />
                         {(room.roomName === "Safe Exit" || (room.roomName === "Dangerous Exit"))
                             &&
                             <div>
@@ -74,11 +74,11 @@ export const Content = ({ adventureState, setAdventureState }) => {
                     <div className='text-center w-65 mx-auto p-3'>
                         <h1 className='text-danger'>{room.roomName}</h1>
                         <p className='room_message'>{room.message}</p>
-                        <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} setVisibility={setVisibility} />
+                        <UserResponseButtons userResponse={room.event[0]} setEventResolution={setEventResolution} setDisplay={setDisplay} />
                         <div>
                             <p className='room_message'>{eventResolution}</p>
                         </div>
-                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} visibility={visibility} setVisibility={setVisibility} setAdventureState={setAdventureState} />
+                        <DPad roomDirections={room.direction} setEventResolution={setEventResolution} display={display} setDisplay={setDisplay} setAdventureState={setAdventureState} />
                     </div>
             )
             }

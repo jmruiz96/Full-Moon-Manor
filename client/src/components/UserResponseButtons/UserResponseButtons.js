@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import '../UserResponseButtons/userresponsebuttons.css';
 import { useLifeCountContext } from "../../utils/LifeCountContext";
 
-export const UserResponseButtons = ({ userResponse, setEventResolution, setVisibility }) => {
+export const UserResponseButtons = ({ userResponse, setEventResolution, setDisplay }) => {
 
   const { lifeCount, setLifeCount } = useLifeCountContext();
   const handleEventClick = (severity) => {
@@ -27,7 +27,7 @@ export const UserResponseButtons = ({ userResponse, setEventResolution, setVisib
             data-message={response.resolutionMessage} onClick={(e) => {
               setEventResolution(response.resolutionMessage);
               handleEventClick(response.severity);
-              setVisibility('visible');
+              setDisplay('block');
             }} />
         )
       })}
