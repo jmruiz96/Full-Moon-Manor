@@ -57,7 +57,7 @@ export const Content = ({ adventureState, setAdventureState }) => {
                 // Checking if room has no event or event, render different XML
                 Auth.loggedIn() && room.event.length === 0 ?
                     // If room has no event, render this 
-                    <div className='text-center w-65 mx-auto'>
+                    <div className='text-center w-65 mx-auto p-3'>
                         <h1 className='text-danger'>{room.roomName}</h1>
                         <p className='room_message'>{room.message}</p>
                         <DPad roomDirections={room.direction} setEventResolution={setEventResolution} display={"block"} setDisplay={setDisplay} setAdventureState={setAdventureState} />
